@@ -11,7 +11,7 @@ body {
     background-color: #0f172a;
     color: #e2e8f0;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 30px;
     line-height: 1.8;
 }
@@ -20,8 +20,8 @@ body {
 
 .hero {
     text-align: center;
-    padding: 80px 30px;
-    margin-bottom: 60px;
+    padding: 90px 30px;
+    margin-bottom: 70px;
     border-radius: 20px;
     background: linear-gradient(135deg, #0f172a, #1e293b);
     border: 1px solid #334155;
@@ -30,15 +30,15 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 15px;
     color: #f8fafc;
+    margin-bottom: 15px;
 }
 
 .subtitle {
     font-size: 1.3rem;
     color: #38bdf8;
+    font-weight: 600;
     margin-bottom: 20px;
-    font-weight: 500;
 }
 
 .hero-description {
@@ -48,7 +48,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Links */
+/* Navigation Links */
 
 .links {
     display: flex;
@@ -61,7 +61,7 @@ body {
     background-color: #38bdf8;
     color: #0f172a;
     text-decoration: none;
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -72,7 +72,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Sections */
+/* Section Styling */
 
 section {
     margin-bottom: 70px;
@@ -80,21 +80,21 @@ section {
 
 h2 {
     color: #38bdf8;
-    margin-bottom: 25px;
     font-size: 2rem;
+    margin-bottom: 25px;
 }
 
 section p {
-    margin-bottom: 20px;
     color: #cbd5e1;
+    margin-bottom: 18px;
 }
 
-/* Grid Layouts */
+/* Grid Layout */
 
 .skills-grid,
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -135,6 +135,25 @@ section p {
     color: #7dd3fc;
 }
 
+/* Technology Badges */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-stack span {
+    background-color: #0f172a;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 /* Footer */
 
 footer {
@@ -145,7 +164,7 @@ footer {
     color: #94a3b8;
 }
 
-/* Mobile */
+/* Mobile Responsive */
 
 @media (max-width: 768px) {
 
@@ -177,5 +196,10 @@ footer {
     .links a {
         width: 220px;
         text-align: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }

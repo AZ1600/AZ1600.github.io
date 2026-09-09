@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <meta
     name="description"
-    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Kubernetes, Platform Engineering, DevOps, Infrastructure as Code and cloud-native systems."
+    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Kubernetes, Platform Engineering, DevOps, Infrastructure as Code, GitOps and cloud-native systems."
   />
 
   <title>Olawale Azeez | Cloud & Platform Engineer</title>
@@ -16,17 +19,27 @@
 
 <body>
 
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+
   <!-- NAVIGATION -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary navigation">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">OA</a>
+
+      <a href="#top" class="nav__brand" aria-label="Olawale Azeez home">
+        OA
+      </a>
 
       <div class="nav__links">
         <a href="#about">About</a>
         <a href="#featured">Projects</a>
+        <a href="#platform-work">Platform Work</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </div>
+
     </div>
   </nav>
 
@@ -43,7 +56,9 @@
         Cloud • Platform • Kubernetes • DevOps
       </div>
 
-      <p class="hero__intro">Hello, I'm</p>
+      <p class="hero__intro">
+        Hello, I'm
+      </p>
 
       <h1>Olawale Azeez</h1>
 
@@ -62,11 +77,18 @@
         developer experience and operational visibility.
       </p>
 
-      <div class="hero__cert">
-        AWS Certified Developer – Associate
+      <div class="hero__meta">
+        <span class="hero__cert">
+          AWS Certified Developer – Associate
+        </span>
+
+        <span class="hero__availability">
+          Open to Cloud, Platform and DevOps opportunities
+        </span>
       </div>
 
       <div class="hero__actions">
+
         <a
           class="button button--primary"
           href="https://github.com/AZ1600"
@@ -85,16 +107,63 @@
           LinkedIn
         </a>
 
-        <a class="button button--ghost" href="#featured">
-          Explore Projects
+        <!--
+          Place your latest CV at /resume.pdf.
+          Remove this button if you do not want a public CV.
+        -->
+        <a
+          class="button button--ghost"
+          href="resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Resume
         </a>
+
+        <a
+          class="button button--text"
+          href="#featured"
+        >
+          Explore Projects ↓
+        </a>
+
       </div>
 
     </div>
   </header>
 
 
-  <main class="page">
+  <!-- ENGINEERING PROOF -->
+  <section class="proof-strip" aria-label="Engineering portfolio evidence">
+
+    <div class="proof-strip__inner">
+
+      <div class="proof-item">
+        <strong>Real AWS validation</strong>
+        <span>Deployed workloads and infrastructure evidence</span>
+      </div>
+
+      <div class="proof-item">
+        <strong>Automated quality gates</strong>
+        <span>CI, tests, schema validation and security checks</span>
+      </div>
+
+      <div class="proof-item">
+        <strong>Secure by default</strong>
+        <span>Least privilege, workload identity and hardened runtimes</span>
+      </div>
+
+      <div class="proof-item">
+        <strong>Platform thinking</strong>
+        <span>IaC, GitOps, observability and developer self-service</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class="page" id="main-content">
 
 
     <!-- ABOUT -->
@@ -102,12 +171,23 @@
 
       <div class="section-heading">
         <span class="section-label">Profile</span>
-        <h2>Engineering cloud platforms that are built to operate.</h2>
+
+        <h2>
+          Engineering cloud platforms that are built to operate.
+        </h2>
+
+        <p class="section-description">
+          I focus on infrastructure that can be deployed, validated,
+          observed and improved rather than architecture that exists only
+          on diagrams.
+        </p>
       </div>
+
 
       <div class="about-grid">
 
         <div class="content-card about-copy">
+
           <p>
             I am a Cloud and Platform Engineer focused on AWS,
             Kubernetes, Infrastructure as Code, CI/CD, observability
@@ -123,50 +203,129 @@
 
           <p>
             I also build AI-assisted operational and product systems
-            where automation can remove repetitive work while keeping
-            important actions observable and controlled.
+            where automation removes repetitive work while important
+            decisions remain observable and controlled.
           </p>
+
         </div>
 
 
         <div class="engineering-principles">
 
           <div class="principle">
-            <span class="principle__number">01</span>
+
+            <span class="principle__number">
+              01
+            </span>
+
             <div>
               <h3>Secure by default</h3>
+
               <p>
-                Non-root workloads, least privilege, workload identity
-                and explicit security controls.
+                Non-root workloads, least privilege, workload identity,
+                explicit security controls and fail-closed behaviour.
               </p>
             </div>
+
           </div>
 
+
           <div class="principle">
-            <span class="principle__number">02</span>
+
+            <span class="principle__number">
+              02
+            </span>
+
             <div>
               <h3>Evidence over claims</h3>
+
               <p>
-                Real deployments, CI validation, runtime testing and
-                observable infrastructure.
+                Real deployments, automated validation, runtime testing,
+                CI evidence and observable infrastructure.
               </p>
             </div>
+
           </div>
 
+
           <div class="principle">
-            <span class="principle__number">03</span>
+
+            <span class="principle__number">
+              03
+            </span>
+
             <div>
               <h3>Automate repeatable work</h3>
+
               <p>
                 Infrastructure as Code, GitOps, CI/CD and platform
-                workflows designed for repeatability.
+                workflows designed for repeatability and consistency.
               </p>
             </div>
+
           </div>
 
         </div>
 
       </div>
+
+    </section>
+
+
+    <!-- ENGINEERING LIFECYCLE -->
+    <section class="section section--compact">
+
+      <div class="section-heading">
+        <span class="section-label">Engineering Approach</span>
+
+        <h2>
+          From architecture to operational evidence.
+        </h2>
+      </div>
+
+
+      <div class="lifecycle">
+
+        <div class="lifecycle__item">
+          <span>01</span>
+          <strong>Design</strong>
+          <p>Architecture, boundaries and operating model</p>
+        </div>
+
+        <div class="lifecycle__arrow">→</div>
+
+        <div class="lifecycle__item">
+          <span>02</span>
+          <strong>Provision</strong>
+          <p>Terraform, CloudFormation and AWS SAM</p>
+        </div>
+
+        <div class="lifecycle__arrow">→</div>
+
+        <div class="lifecycle__item">
+          <span>03</span>
+          <strong>Validate</strong>
+          <p>Tests, linting, security and schema checks</p>
+        </div>
+
+        <div class="lifecycle__arrow">→</div>
+
+        <div class="lifecycle__item">
+          <span>04</span>
+          <strong>Deploy</strong>
+          <p>CI/CD, GitOps and immutable workloads</p>
+        </div>
+
+        <div class="lifecycle__arrow">→</div>
+
+        <div class="lifecycle__item">
+          <span>05</span>
+          <strong>Operate</strong>
+          <p>Logs, metrics, health and runtime evidence</p>
+        </div>
+
+      </div>
+
     </section>
 
 
@@ -178,77 +337,127 @@
         <h2>Core engineering stack</h2>
       </div>
 
+
       <div class="skills-grid">
 
         <article class="skill-card">
-          <span class="skill-card__icon">☁</span>
+
+          <span class="skill-card__icon">
+            ☁
+          </span>
+
           <h3>Cloud</h3>
+
           <p>
             AWS • Amazon EKS • Lambda • API Gateway • DynamoDB •
             EventBridge • ECR • IAM • CloudWatch
           </p>
+
         </article>
 
+
         <article class="skill-card">
-          <span class="skill-card__icon">⬡</span>
+
+          <span class="skill-card__icon">
+            ⬡
+          </span>
+
           <h3>Kubernetes</h3>
+
           <p>
-            Kubernetes • Amazon EKS • Argo CD • Helm • Workload
-            Security • Pod Identity
+            Kubernetes • Amazon EKS • Argo CD • Helm • Workload Security •
+            EKS Pod Identity
           </p>
+
         </article>
 
+
         <article class="skill-card">
-          <span class="skill-card__icon">⌘</span>
+
+          <span class="skill-card__icon">
+            ⌘
+          </span>
+
           <h3>Infrastructure</h3>
+
           <p>
-            Terraform • CloudFormation • AWS SAM • Infrastructure as
-            Code • Environment Design
+            Terraform • CloudFormation • AWS SAM • Infrastructure as Code •
+            Environment Design
           </p>
+
         </article>
 
+
         <article class="skill-card">
-          <span class="skill-card__icon">↻</span>
+
+          <span class="skill-card__icon">
+            ↻
+          </span>
+
           <h3>Delivery</h3>
+
           <p>
             GitHub Actions • CI/CD • GitOps • Docker • Amazon ECR •
             Deployment Validation
           </p>
+
         </article>
 
+
         <article class="skill-card">
-          <span class="skill-card__icon">◉</span>
+
+          <span class="skill-card__icon">
+            ◉
+          </span>
+
           <h3>Observability</h3>
+
           <p>
             Prometheus • Grafana • CloudWatch • Metrics • Alerting •
-            SRE Practices
+            Operational Visibility
           </p>
+
         </article>
 
+
         <article class="skill-card">
-          <span class="skill-card__icon">⌁</span>
+
+          <span class="skill-card__icon">
+            ⌁
+          </span>
+
           <h3>Engineering</h3>
+
           <p>
             Python • FastAPI • TypeScript • React • Next.js • Bash •
             PostgreSQL
           </p>
+
         </article>
 
       </div>
+
     </section>
 
 
-    <!-- FEATURED -->
+    <!-- FEATURED PROJECTS -->
     <section class="section" id="featured">
 
       <div class="section-heading">
-        <span class="section-label">Selected Work</span>
-        <h2>Featured engineering projects</h2>
+
+        <span class="section-label">
+          Selected Work
+        </span>
+
+        <h2>
+          Flagship engineering projects
+        </h2>
 
         <p class="section-description">
-          Projects selected for depth of engineering, architecture,
-          deployment evidence and operational thinking.
+          Projects selected for engineering depth, operational thinking,
+          security controls and evidence of working systems.
         </p>
+
       </div>
 
 
@@ -256,34 +465,47 @@
       <article class="featured-project">
 
         <div class="featured-project__top">
+
           <div>
-            <span class="project-number">01</span>
-            <span class="featured-project__eyebrow">
-              Platform Engineering
+
+            <span class="project-number">
+              01
             </span>
+
+            <span class="featured-project__eyebrow">
+              AI Platform Operations
+            </span>
+
           </div>
 
-          <span class="project-status">Flagship</span>
+          <span class="project-status">
+            Flagship
+          </span>
+
         </div>
+
 
         <div class="featured-project__content">
 
-          <div>
-            <h3>CloudOps Command Center</h3>
+          <div class="featured-project__main">
+
+            <h3>
+              CloudOps Command Center
+            </h3>
 
             <p class="project-lead">
-              An AI-assisted platform engineering command center for
-              identifying infrastructure risks and guiding controlled
-              remediation.
+              AI-assisted platform operations for identifying
+              infrastructure risks and guiding controlled remediation.
             </p>
 
             <p>
-              Brings signals from GitHub Actions, Terraform, AWS,
-              Kubernetes and monitoring workflows into a single
-              operational experience. Risks are explained, routed to
-              service owners and paired with recommended remediation,
-              while simulated fixes remain behind human approval.
+              Brings operational signals from CI, Terraform, AWS,
+              Kubernetes and monitoring workflows into a unified
+              experience. Risks are explained, associated with service
+              ownership and paired with recommended remediation while
+              simulated changes remain behind human approval.
             </p>
+
 
             <div class="tech-stack">
               <span>Next.js</span>
@@ -295,7 +517,9 @@
               <span>Vercel</span>
             </div>
 
+
             <div class="project-actions">
+
               <a
                 href="https://cloudops-command-center.vercel.app"
                 target="_blank"
@@ -311,30 +535,50 @@
               >
                 GitHub →
               </a>
+
             </div>
+
           </div>
 
 
-          <div class="project-highlights">
+          <div class="project-evidence">
 
-            <div>
-              <strong>Risk ingestion</strong>
-              <span>CI, Terraform and infrastructure signals</span>
+            <span class="project-evidence__label">
+              Engineering evidence
+            </span>
+
+            <div class="evidence-row">
+              <strong>Multi-source risk ingestion</strong>
+              <span>
+                CI, Terraform and infrastructure signals
+              </span>
             </div>
 
-            <div>
+            <div class="evidence-row">
               <strong>Decision trace</strong>
-              <span>Explainable recommendations and impact</span>
+              <span>
+                Explainable impact and remediation guidance
+              </span>
             </div>
 
-            <div>
-              <strong>Human approval</strong>
-              <span>Controlled operational remediation</span>
+            <div class="evidence-row">
+              <strong>Ownership routing</strong>
+              <span>
+                Operational issues associated with responsible services
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Approval gate</strong>
+              <span>
+                Remediation remains controlled by a human decision
+              </span>
             </div>
 
           </div>
 
         </div>
+
       </article>
 
 
@@ -342,20 +586,33 @@
       <article class="featured-project">
 
         <div class="featured-project__top">
+
           <div>
-            <span class="project-number">02</span>
+
+            <span class="project-number">
+              02
+            </span>
+
             <span class="featured-project__eyebrow">
               Kubernetes Operations
             </span>
+
           </div>
 
-          <span class="project-status">Flagship</span>
+          <span class="project-status">
+            Flagship
+          </span>
+
         </div>
+
 
         <div class="featured-project__content">
 
-          <div>
-            <h3>PlatformPilot</h3>
+          <div class="featured-project__main">
+
+            <h3>
+              PlatformPilot
+            </h3>
 
             <p class="project-lead">
               Kubernetes operations dashboard designed to make cluster
@@ -365,9 +622,10 @@
             <p>
               Provides visibility into pods, deployments, nodes and
               namespaces together with live logs, Kubernetes events,
-              filtering, search, auto-refresh and AI-assisted
-              operational analysis.
+              filtering, search, auto-refresh and AI-assisted operational
+              analysis.
             </p>
+
 
             <div class="tech-stack">
               <span>React</span>
@@ -378,7 +636,9 @@
               <span>Docker</span>
             </div>
 
+
             <div class="project-actions">
+
               <a
                 href="https://github.com/AZ1600/platform-pilot"
                 target="_blank"
@@ -386,30 +646,50 @@
               >
                 GitHub →
               </a>
+
             </div>
+
           </div>
 
 
-          <div class="project-highlights">
+          <div class="project-evidence">
 
-            <div>
-              <strong>Cluster visibility</strong>
-              <span>Pods, nodes, deployments and namespaces</span>
+            <span class="project-evidence__label">
+              Engineering evidence
+            </span>
+
+            <div class="evidence-row">
+              <strong>Resource drill-down</strong>
+              <span>
+                Pods, nodes, deployments and namespaces
+              </span>
             </div>
 
-            <div>
+            <div class="evidence-row">
               <strong>Operational context</strong>
-              <span>Logs, events, search and filtering</span>
+              <span>
+                Live logs, events, filtering and resource search
+              </span>
             </div>
 
-            <div>
-              <strong>AI assistance</strong>
-              <span>Troubleshooting support and analysis</span>
+            <div class="evidence-row">
+              <strong>Frontend performance</strong>
+              <span>
+                Route-level code splitting for heavy dashboard features
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>AI-assisted analysis</strong>
+              <span>
+                Troubleshooting context and operational guidance
+              </span>
             </div>
 
           </div>
 
         </div>
+
       </article>
 
 
@@ -417,22 +697,33 @@
       <article class="featured-project featured-project--eks">
 
         <div class="featured-project__top">
+
           <div>
-            <span class="project-number">03</span>
+
+            <span class="project-number">
+              03
+            </span>
+
             <span class="featured-project__eyebrow">
               Amazon EKS Workload Engineering
             </span>
+
           </div>
 
           <span class="project-status project-status--validated">
-            Live validated
+            Validated on AWS
           </span>
+
         </div>
+
 
         <div class="featured-project__content">
 
-          <div>
-            <h3>Pharmacy API on Amazon EKS</h3>
+          <div class="featured-project__main">
+
+            <h3>
+              Pharmacy API on Amazon EKS
+            </h3>
 
             <p class="project-lead">
               Security-hardened FastAPI workload deployed and validated
@@ -440,11 +731,12 @@
             </p>
 
             <p>
-              The project demonstrates container hardening, immutable
-              Amazon ECR image delivery, Kubernetes workload security,
-              EKS Pod Identity, least-privilege IAM, DynamoDB
-              persistence and automated CI validation.
+              Demonstrates container hardening, immutable Amazon ECR
+              delivery, Kubernetes workload security, EKS Pod Identity,
+              least-privilege IAM, DynamoDB persistence, EventBridge
+              integration and automated CI validation.
             </p>
+
 
             <div class="tech-stack">
               <span>Amazon EKS</span>
@@ -458,7 +750,9 @@
               <span>GitHub Actions</span>
             </div>
 
+
             <div class="project-actions">
+
               <a
                 href="https://github.com/AZ1600/pharmacy-api-eks"
                 target="_blank"
@@ -466,131 +760,113 @@
               >
                 View Case Study →
               </a>
+
             </div>
+
           </div>
 
 
-          <div class="project-highlights">
+          <div class="project-evidence">
 
-            <div>
-              <strong>2/2 replicas available</strong>
-              <span>Validated EKS workload deployment</span>
+            <span class="project-evidence__label">
+              AWS validation evidence
+            </span>
+
+            <div class="evidence-row">
+              <strong>2 / 2 replicas available</strong>
+              <span>
+                EKS workload successfully scheduled and healthy
+              </span>
             </div>
 
-            <div>
+            <div class="evidence-row">
               <strong>STS authentication OK</strong>
-              <span>EKS Pod Identity without static credentials</span>
+              <span>
+                Pod Identity without static AWS credentials
+              </span>
             </div>
 
-            <div>
+            <div class="evidence-row">
               <strong>HTTP 200</strong>
-              <span>Live application health validation</span>
+              <span>
+                Live application health validation
+              </span>
             </div>
 
-            <div>
+            <div class="evidence-row">
               <strong>DynamoDB persistence</strong>
-              <span>End-to-end application write validated</span>
+              <span>
+                End-to-end application write validated
+              </span>
             </div>
 
           </div>
 
         </div>
+
       </article>
 
     </section>
 
 
-    <!-- SELECTED PLATFORM WORK -->
-    <section class="section">
+    <!-- PLATFORM WORK -->
+    <section class="section" id="platform-work">
 
       <div class="section-heading">
-        <span class="section-label">Platform Portfolio</span>
-        <h2>Selected engineering work</h2>
+
+        <span class="section-label">
+          Platform Portfolio
+        </span>
+
+        <h2>
+          Infrastructure, delivery and developer platforms
+        </h2>
+
+        <p class="section-description">
+          Supporting projects demonstrating the systems that provision,
+          secure, deliver and operate cloud-native workloads.
+        </p>
+
       </div>
+
 
       <div class="projects-grid">
 
 
-        <article class="project-card">
-          <div class="project-card__category">
-            Internal Developer Platform
-          </div>
+        <!-- TERRAFORM -->
+        <article class="project-card project-card--accent">
 
-          <h3>Backstage Developer Portal</h3>
-
-          <p>
-            Internal developer platform for service catalog management,
-            technical documentation, self-service workflows and
-            Kubernetes visibility.
-          </p>
-
-          <div class="tech-stack">
-            <span>Backstage</span>
-            <span>Kubernetes</span>
-            <span>Docker</span>
-            <span>GitHub</span>
-          </div>
-
-          <a
-            class="project-card__link"
-            href="https://github.com/AZ1600/platform-engineering-backstage-portal"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Project →
-          </a>
-        </article>
-
-
-        <article class="project-card">
-          <div class="project-card__category">
-            GitOps
-          </div>
-
-          <h3>GitOps with Argo CD</h3>
-
-          <p>
-            Declarative continuous delivery workflows using Argo CD,
-            Kubernetes and GitHub to synchronize desired state into
-            cluster environments.
-          </p>
-
-          <div class="tech-stack">
-            <span>Argo CD</span>
-            <span>GitOps</span>
-            <span>Kubernetes</span>
-            <span>GitHub</span>
-          </div>
-
-          <a
-            class="project-card__link"
-            href="https://github.com/AZ1600/platform-engineering-gitops-argocd"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Project →
-          </a>
-        </article>
-
-
-        <article class="project-card">
           <div class="project-card__category">
             Infrastructure as Code
           </div>
 
-          <h3>Terraform AWS EKS Platform</h3>
+          <h3>
+            Terraform AWS EKS Platform
+          </h3>
 
           <p>
-            AWS infrastructure and Kubernetes platform provisioning
-            using Terraform with networking, IAM and EKS foundations.
+            Production-minded Amazon EKS infrastructure using reusable
+            Terraform modules, secure remote state, hardened cluster
+            defaults and automated infrastructure validation.
           </p>
+
+
+          <ul class="project-card__proof">
+            <li>Reusable network and EKS modules</li>
+            <li>Secure S3 remote state and state locking</li>
+            <li>Private API and control-plane logging</li>
+            <li>Automated Terraform CI validation</li>
+          </ul>
+
 
           <div class="tech-stack">
             <span>Terraform</span>
             <span>AWS</span>
             <span>EKS</span>
             <span>IAM</span>
+            <span>GitHub Actions</span>
           </div>
+
 
           <a
             class="project-card__link"
@@ -600,60 +876,137 @@
           >
             View Project →
           </a>
+
         </article>
 
 
-        <article class="project-card">
+        <!-- GITOPS -->
+        <article class="project-card project-card--accent">
+
           <div class="project-card__category">
-            Observability
+            GitOps
           </div>
 
-          <h3>Platform Observability Stack</h3>
+          <h3>
+            GitOps with Argo CD
+          </h3>
 
           <p>
-            Monitoring and observability environment focused on
-            metrics, dashboards, alerting and infrastructure
-            visibility.
+            Declarative application delivery with Argo CD, constrained
+            project boundaries and automated schema validation for both
+            Kubernetes workloads and Argo CD custom resources.
           </p>
 
+
+          <ul class="project-card__proof">
+            <li>Argo CD Application reconciliation</li>
+            <li>Constrained AppProject boundaries</li>
+            <li>Kubernetes manifest validation</li>
+            <li>Argo CD CRD schema validation</li>
+          </ul>
+
+
           <div class="tech-stack">
-            <span>Prometheus</span>
-            <span>Grafana</span>
-            <span>CloudWatch</span>
-            <span>Docker</span>
+            <span>Argo CD</span>
+            <span>GitOps</span>
+            <span>Kubernetes</span>
+            <span>GitHub Actions</span>
           </div>
+
 
           <a
             class="project-card__link"
-            href="https://github.com/AZ1600/platform-engineering-observability"
+            href="https://github.com/AZ1600/platform-engineering-gitops-argocd"
             target="_blank"
             rel="noreferrer"
           >
             View Project →
           </a>
+
         </article>
 
 
+        <!-- BACKSTAGE -->
+        <article class="project-card project-card--accent">
+
+          <div class="project-card__category">
+            Internal Developer Platform
+          </div>
+
+          <h3>
+            Backstage Developer Portal
+          </h3>
+
+          <p>
+            Internal Developer Platform built around Backstage for
+            service discoverability, standardised golden paths,
+            self-service scaffolding and platform workflows.
+          </p>
+
+
+          <ul class="project-card__proof">
+            <li>Software catalog and ownership visibility</li>
+            <li>FastAPI golden-path service template</li>
+            <li>Generated Kubernetes and CI/CD configuration</li>
+            <li>Developer self-service workflows</li>
+          </ul>
+
+
+          <div class="tech-stack">
+            <span>Backstage</span>
+            <span>Kubernetes</span>
+            <span>TypeScript</span>
+            <span>GitHub</span>
+          </div>
+
+
+          <a
+            class="project-card__link"
+            href="https://github.com/AZ1600/platform-engineering-backstage-portal"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- SERVERLESS PHARMACY -->
         <article class="project-card">
+
           <div class="project-card__category">
             Serverless Architecture
           </div>
 
-          <h3>Cloud-Native Pharmacy Platform</h3>
+          <h3>
+            Cloud-Native Pharmacy Platform
+          </h3>
 
           <p>
-            Multi-tenant serverless AWS application demonstrating
-            identity, asynchronous messaging, event-driven architecture
-            and tenant-aware persistence.
+            Multi-tenant AWS serverless platform with Cognito JWT
+            protection, tenant-aware DynamoDB access, asynchronous
+            messaging and event-driven workflows.
           </p>
+
+
+          <ul class="project-card__proof">
+            <li>Cognito protected API routes</li>
+            <li>Tenant-scoped persistence and audit operations</li>
+            <li>SQS and EventBridge event processing</li>
+            <li>Explicit CORS allowlisting and automated tests</li>
+          </ul>
+
 
           <div class="tech-stack">
             <span>Lambda</span>
             <span>API Gateway</span>
             <span>DynamoDB</span>
             <span>Cognito</span>
+            <span>SQS</span>
             <span>EventBridge</span>
           </div>
+
 
           <a
             class="project-card__link"
@@ -663,20 +1016,64 @@
           >
             View Project →
           </a>
+
         </article>
 
 
+        <!-- OBSERVABILITY -->
         <article class="project-card">
+
+          <div class="project-card__category">
+            Observability
+          </div>
+
+          <h3>
+            Platform Observability Stack
+          </h3>
+
+          <p>
+            Monitoring environment focused on metrics, dashboards,
+            alerting and infrastructure visibility across cloud-native
+            workloads.
+          </p>
+
+
+          <div class="tech-stack">
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>CloudWatch</span>
+            <span>Docker</span>
+          </div>
+
+
+          <a
+            class="project-card__link"
+            href="https://github.com/AZ1600/platform-engineering-observability"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- CICD -->
+        <article class="project-card">
+
           <div class="project-card__category">
             CI/CD
           </div>
 
-          <h3>Cloud-Native CI/CD Pipeline</h3>
+          <h3>
+            Cloud-Native CI/CD Pipeline
+          </h3>
 
           <p>
             Automated container build and delivery workflows using
             GitHub Actions, Docker, Amazon ECR and AWS IAM.
           </p>
+
 
           <div class="tech-stack">
             <span>GitHub Actions</span>
@@ -684,6 +1081,7 @@
             <span>Amazon ECR</span>
             <span>AWS IAM</span>
           </div>
+
 
           <a
             class="project-card__link"
@@ -693,21 +1091,65 @@
           >
             View Project →
           </a>
+
         </article>
 
+      </div>
 
-        <article class="project-card">
-          <div class="project-card__category">
-            AI SaaS
-          </div>
+    </section>
 
-          <h3>OpsPilot</h3>
+
+    <!-- PRODUCT ENGINEERING -->
+    <section class="section section--secondary">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Product Engineering
+        </span>
+
+        <h2>
+          SaaS and automation systems
+        </h2>
+
+        <p class="section-description">
+          Supporting product work that demonstrates multi-tenant
+          application architecture, AI workflows and serverless
+          automation.
+        </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+
+        <!-- OPSPILOT -->
+        <article class="product-card">
+
+          <span class="product-card__label">
+            AI Operations SaaS
+          </span>
+
+          <h3>
+            OpsPilot
+          </h3>
 
           <p>
             Multi-workspace AI operations SaaS designed to identify
             operational and revenue risks and turn them into
             owner-approved actions.
           </p>
+
+
+          <div class="product-card__evidence">
+
+            <span>Tenant isolation regression tests</span>
+            <span>Fail-closed production authentication</span>
+            <span>Dependency security gate</span>
+
+          </div>
+
 
           <div class="tech-stack">
             <span>Next.js</span>
@@ -717,29 +1159,34 @@
             <span>Stripe</span>
           </div>
 
+
           <a
-            class="project-card__link"
             href="https://github.com/AZ1600/opspilot-saas"
             target="_blank"
             rel="noreferrer"
           >
             View Project →
           </a>
+
         </article>
 
 
-        <article class="project-card">
-          <div class="project-card__category">
-            Automation
-          </div>
+        <!-- AI CONTENT -->
+        <article class="product-card">
 
-          <h3>AI Content Automation Platform</h3>
+          <span class="product-card__label">
+            Serverless Automation
+          </span>
+
+          <h3>
+            AI Content Automation Platform
+          </h3>
 
           <p>
-            Serverless content automation system for planning,
-            scheduling and publishing workflows using AWS managed
-            services.
+            Serverless AWS platform for multi-account social content
+            planning, queueing, scheduling and publishing workflows.
           </p>
+
 
           <div class="tech-stack">
             <span>Lambda</span>
@@ -748,14 +1195,15 @@
             <span>AWS SAM</span>
           </div>
 
+
           <a
-            class="project-card__link"
             href="https://github.com/AZ1600/AI-Powered-Content-Automation-Platform"
             target="_blank"
             rel="noreferrer"
           >
             View Project →
           </a>
+
         </article>
 
       </div>
@@ -767,22 +1215,35 @@
     <section class="section section--quiet">
 
       <div class="section-heading">
-        <span class="section-label">Other Builds</span>
-        <h2>Product experiments and applied AI</h2>
+
+        <span class="section-label">
+          Other Builds
+        </span>
+
+        <h2>
+          Product experiments and applied AI
+        </h2>
 
         <p class="section-description">
-          Selected product work outside the main Cloud and Platform
+          Selected product work outside the primary Cloud and Platform
           Engineering portfolio.
         </p>
+
       </div>
 
 
       <div class="other-builds">
 
         <article class="other-build">
+
           <div>
-            <span class="other-build__label">AI Product</span>
-            <h3>Tactiq AI</h3>
+            <span class="other-build__label">
+              AI Product
+            </span>
+
+            <h3>
+              Tactiq AI
+            </h3>
           </div>
 
           <p>
@@ -795,13 +1256,20 @@
             <span>Automation</span>
             <span>Product Engineering</span>
           </div>
+
         </article>
 
 
         <article class="other-build">
+
           <div>
-            <span class="other-build__label">Product Build</span>
-            <h3>HavenConsent</h3>
+            <span class="other-build__label">
+              Product Build
+            </span>
+
+            <h3>
+              HavenConsent
+            </h3>
           </div>
 
           <p>
@@ -815,9 +1283,11 @@
             <span>Product</span>
             <span>Workflow Design</span>
           </div>
+
         </article>
 
       </div>
+
 
       <p class="quiet-note">
         These projects are intentionally presented as supporting work
@@ -831,34 +1301,86 @@
     <section class="section" id="certifications">
 
       <div class="section-heading">
-        <span class="section-label">Credentials</span>
-        <h2>AWS Certifications</h2>
+
+        <span class="section-label">
+          Credentials
+        </span>
+
+        <h2>
+          AWS Certifications
+        </h2>
+
       </div>
+
 
       <div class="cert-grid">
 
         <article class="cert-card cert-card--primary">
-          <span class="cert-card__provider">AWS</span>
-          <h3>Certified Developer – Associate</h3>
-          <p>Application development and deployment on AWS.</p>
+
+          <span class="cert-card__provider">
+            AWS
+          </span>
+
+          <h3>
+            Certified Developer – Associate
+          </h3>
+
+          <p>
+            Application development, deployment and cloud-native
+            engineering on AWS.
+          </p>
+
         </article>
 
-        <article class="cert-card">
-          <span class="cert-card__provider">AWS</span>
-          <h3>Solutions Architect – Associate</h3>
-          <p>Secure, resilient and scalable AWS architectures.</p>
-        </article>
 
         <article class="cert-card">
-          <span class="cert-card__provider">AWS</span>
-          <h3>AI Practitioner</h3>
-          <p>AI, machine learning and generative AI concepts on AWS.</p>
+
+          <span class="cert-card__provider">
+            AWS
+          </span>
+
+          <h3>
+            Solutions Architect – Associate
+          </h3>
+
+          <p>
+            Secure, resilient and scalable AWS architectures.
+          </p>
+
         </article>
 
+
         <article class="cert-card">
-          <span class="cert-card__provider">AWS</span>
-          <h3>Cloud Practitioner</h3>
-          <p>AWS cloud concepts, services, security and economics.</p>
+
+          <span class="cert-card__provider">
+            AWS
+          </span>
+
+          <h3>
+            AI Practitioner
+          </h3>
+
+          <p>
+            AI, machine learning and generative AI concepts on AWS.
+          </p>
+
+        </article>
+
+
+        <article class="cert-card">
+
+          <span class="cert-card__provider">
+            AWS
+          </span>
+
+          <h3>
+            Cloud Practitioner
+          </h3>
+
+          <p>
+            AWS cloud concepts, services, security and economics.
+          </p>
+
         </article>
 
       </div>
@@ -871,16 +1393,21 @@
 
       <div class="contact-panel">
 
-        <span class="section-label">Contact</span>
+        <span class="section-label">
+          Contact
+        </span>
 
-        <h2>Building cloud platforms that teams can trust.</h2>
+        <h2>
+          Building cloud platforms that teams can trust.
+        </h2>
 
         <p>
           I am interested in Cloud Engineering, Platform Engineering,
           DevOps and Site Reliability Engineering opportunities where I
           can work on cloud infrastructure, Kubernetes, developer
-          platforms and delivery automation.
+          platforms, automation and reliable delivery systems.
         </p>
+
 
         <div class="hero__actions">
 
@@ -902,6 +1429,15 @@
             LinkedIn
           </a>
 
+          <a
+            class="button button--ghost"
+            href="resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
+
         </div>
 
       </div>
@@ -911,11 +1447,21 @@
   </main>
 
 
+  <!-- FOOTER -->
   <footer>
+
     <div class="footer__inner">
-      <p>© 2026 Olawale Azeez</p>
-      <p>Cloud • Platform • Kubernetes • DevOps</p>
+
+      <p>
+        © 2026 Olawale Azeez
+      </p>
+
+      <p>
+        Cloud • Platform • Kubernetes • DevOps
+      </p>
+
     </div>
+
   </footer>
 
 </body>

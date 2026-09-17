@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Kubernetes, Platform Engineering, DevOps, Infrastructure as Code, GitOps and cloud-native systems."
+    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Azure, Kubernetes, Platform Engineering, DevOps, Infrastructure as Code, GitOps and cloud-native systems."
   />
 
   <title>Olawale Azeez | Cloud & Platform Engineer</title>
@@ -53,7 +53,7 @@
     <div class="hero__content">
 
       <div class="hero-badge">
-        Cloud • Platform • Kubernetes • DevOps
+        AWS • Azure • Kubernetes • Platform Engineering
       </div>
 
       <p class="hero__intro">
@@ -71,10 +71,10 @@
       </p>
 
       <p class="hero__description">
-        I design and build cloud-native platforms, Kubernetes workloads,
-        internal developer tooling, Infrastructure as Code and automated
-        delivery systems with a strong focus on security, reliability,
-        developer experience and operational visibility.
+        I design and build cloud-native platforms across AWS and Azure,
+        Kubernetes workloads, internal developer tooling, Infrastructure as Code
+        and automated delivery systems with a strong focus on security,
+        reliability, developer experience and operational visibility.
       </p>
 
       <div class="hero__meta">
@@ -107,10 +107,6 @@
           LinkedIn
         </a>
 
-        <!--
-          Place your latest CV at /resume.pdf.
-          Remove this button if you do not want a public CV.
-        -->
         <a
           class="button button--ghost"
           href="resume.pdf"
@@ -139,8 +135,8 @@
     <div class="proof-strip__inner">
 
       <div class="proof-item">
-        <strong>Real AWS validation</strong>
-        <span>Deployed workloads and infrastructure evidence</span>
+        <strong>Real cloud validation</strong>
+        <span>AWS and Azure workloads backed by deployment evidence</span>
       </div>
 
       <div class="proof-item">
@@ -189,8 +185,8 @@
         <div class="content-card about-copy">
 
           <p>
-            I am a Cloud and Platform Engineer focused on AWS,
-            Kubernetes, Infrastructure as Code, CI/CD, observability
+            I am a Cloud and Platform Engineer focused on AWS and Azure,
+            Kubernetes, Infrastructure as Code, CI/CD, identity, observability
             and developer platforms.
           </p>
 
@@ -297,7 +293,7 @@
         <div class="lifecycle__item">
           <span>02</span>
           <strong>Provision</strong>
-          <p>Terraform, CloudFormation and AWS SAM</p>
+          <p>Terraform, Bicep, CloudFormation and AWS SAM</p>
         </div>
 
         <div class="lifecycle__arrow">→</div>
@@ -349,8 +345,8 @@
           <h3>Cloud</h3>
 
           <p>
-            AWS • Amazon EKS • Lambda • API Gateway • DynamoDB •
-            EventBridge • ECR • IAM • CloudWatch
+            AWS • Azure • Amazon EKS • Azure Container Apps • Lambda •
+            PostgreSQL • Key Vault • ACR • ECR • IAM • Entra ID
           </p>
 
         </article>
@@ -381,7 +377,7 @@
           <h3>Infrastructure</h3>
 
           <p>
-            Terraform • CloudFormation • AWS SAM • Infrastructure as Code •
+            Terraform • Bicep • CloudFormation • AWS SAM • Infrastructure as Code •
             Environment Design
           </p>
 
@@ -397,7 +393,7 @@
           <h3>Delivery</h3>
 
           <p>
-            GitHub Actions • CI/CD • GitOps • Docker • Amazon ECR •
+            GitHub Actions • CI/CD • OIDC • GitOps • Docker • ECR • ACR •
             Deployment Validation
           </p>
 
@@ -413,8 +409,8 @@
           <h3>Observability</h3>
 
           <p>
-            Prometheus • Grafana • CloudWatch • Metrics • Alerting •
-            Operational Visibility
+            Prometheus • Grafana • CloudWatch • Application Insights • Log Analytics •
+            Metrics • Alerting • Operational Visibility
           </p>
 
         </article>
@@ -454,8 +450,8 @@
         </h2>
 
         <p class="section-description">
-          Projects selected for engineering depth, operational thinking,
-          security controls and evidence of working systems.
+          Cross-cloud projects selected for engineering depth, operational thinking,
+          identity and security controls, automation and evidence of working systems.
         </p>
 
       </div>
@@ -582,8 +578,8 @@
       </article>
 
 
-      <!-- PLATFORM PILOT -->
-      <article class="featured-project">
+      <!-- PROPERTYOPS -->
+      <article class="featured-project featured-project--azure">
 
         <div class="featured-project__top">
 
@@ -594,13 +590,13 @@
             </span>
 
             <span class="featured-project__eyebrow">
-              Kubernetes Operations
+              Azure Cloud Application Engineering
             </span>
 
           </div>
 
-          <span class="project-status">
-            Flagship
+          <span class="project-status project-status--azure">
+            Validated on Azure
           </span>
 
         </div>
@@ -611,40 +607,44 @@
           <div class="featured-project__main">
 
             <h3>
-              PlatformPilot
+              PropertyOps AI Agent
             </h3>
 
             <p class="project-lead">
-              Kubernetes operations dashboard designed to make cluster
-              health and troubleshooting easier to understand.
+              Azure-hosted property operations platform with Entra ID RBAC,
+              managed identity, PostgreSQL, OIDC CI/CD and Bicep IaC.
             </p>
 
             <p>
-              Provides visibility into pods, deployments, nodes and
-              namespaces together with live logs, Kubernetes events,
-              filtering, search, auto-refresh and AI-assisted operational
-              analysis.
+              Models maintenance triage, human approvals and audit history while
+              demonstrating end-to-end Azure platform engineering. Users authenticate
+              through Microsoft Entra ID, workload identities access ACR and Key Vault,
+              GitHub Actions deploys through OIDC federation, and the platform is
+              observed through Application Insights and Log Analytics.
             </p>
 
 
             <div class="tech-stack">
-              <span>React</span>
+              <span>Azure Container Apps</span>
               <span>FastAPI</span>
-              <span>Python</span>
-              <span>Kubernetes</span>
-              <span>Kubernetes Python Client</span>
-              <span>Docker</span>
+              <span>PostgreSQL</span>
+              <span>Microsoft Entra ID</span>
+              <span>Managed Identity</span>
+              <span>Key Vault</span>
+              <span>Bicep</span>
+              <span>GitHub Actions</span>
+              <span>OIDC</span>
             </div>
 
 
             <div class="project-actions">
 
               <a
-                href="https://github.com/AZ1600/platform-pilot"
+                href="https://github.com/AZ1600/AI-property-operations"
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub →
+                View Case Study →
               </a>
 
             </div>
@@ -655,34 +655,34 @@
           <div class="project-evidence">
 
             <span class="project-evidence__label">
-              Engineering evidence
+              Azure engineering evidence
             </span>
 
             <div class="evidence-row">
-              <strong>Resource drill-down</strong>
+              <strong>Entra ID application roles</strong>
               <span>
-                Pods, nodes, deployments and namespaces
+                PropertyOps.User and PropertyOps.Manager authorization
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>Operational context</strong>
+              <strong>Passwordless workload identity</strong>
               <span>
-                Live logs, events, filtering and resource search
+                Managed identities for ACR pulls and Key Vault access
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>Frontend performance</strong>
+              <strong>OIDC delivery pipeline</strong>
               <span>
-                Route-level code splitting for heavy dashboard features
+                GitHub Actions deploys to Azure without a client secret
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>AI-assisted analysis</strong>
+              <strong>Bicep + observability</strong>
               <span>
-                Troubleshooting context and operational guidance
+                Modular IaC, Azure what-if, Application Insights and Log Analytics
               </span>
             </div>
 
@@ -805,6 +805,118 @@
         </div>
 
       </article>
+
+
+      <!-- PLATFORM PILOT -->
+      <article class="featured-project">
+
+        <div class="featured-project__top">
+
+          <div>
+
+            <span class="project-number">
+              04
+            </span>
+
+            <span class="featured-project__eyebrow">
+              Kubernetes Operations
+            </span>
+
+          </div>
+
+          <span class="project-status">
+            Flagship
+          </span>
+
+        </div>
+
+
+        <div class="featured-project__content">
+
+          <div class="featured-project__main">
+
+            <h3>
+              PlatformPilot
+            </h3>
+
+            <p class="project-lead">
+              Kubernetes operations dashboard designed to make cluster
+              health and troubleshooting easier to understand.
+            </p>
+
+            <p>
+              Provides visibility into pods, deployments, nodes and
+              namespaces together with live logs, Kubernetes events,
+              filtering, search, auto-refresh and AI-assisted operational
+              analysis.
+            </p>
+
+
+            <div class="tech-stack">
+              <span>React</span>
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>Kubernetes</span>
+              <span>Kubernetes Python Client</span>
+              <span>Docker</span>
+            </div>
+
+
+            <div class="project-actions">
+
+              <a
+                href="https://github.com/AZ1600/platform-pilot"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-evidence">
+
+            <span class="project-evidence__label">
+              Engineering evidence
+            </span>
+
+            <div class="evidence-row">
+              <strong>Resource drill-down</strong>
+              <span>
+                Pods, nodes, deployments and namespaces
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Operational context</strong>
+              <span>
+                Live logs, events, filtering and resource search
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Frontend performance</strong>
+              <span>
+                Route-level code splitting for heavy dashboard features
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>AI-assisted analysis</strong>
+              <span>
+                Troubleshooting context and operational guidance
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
 
     </section>
 
@@ -1457,7 +1569,7 @@
       </p>
 
       <p>
-        Cloud • Platform • Kubernetes • DevOps
+        AWS • Azure • Kubernetes • Platform Engineering
       </p>
 
     </div>

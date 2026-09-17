@@ -840,6 +840,22 @@ select {
   background: rgba(74, 222, 128, 0.07);
 }
 
+.featured-project--azure {
+  border-color: rgba(56, 189, 248, 0.24);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(56, 189, 248, 0.055),
+      rgba(88, 166, 255, 0.025),
+      rgba(255, 255, 255, 0.015)
+    );
+}
+
+.featured-project--azure::after {
+  background: rgba(56, 189, 248, 0.085);
+}
+
 .featured-project__top {
   position: relative;
   z-index: 2;
@@ -893,6 +909,13 @@ select {
 
   background: var(--green-soft);
   color: #9de5b5;
+}
+
+.project-status--azure {
+  border-color: rgba(56, 189, 248, 0.24);
+
+  background: rgba(56, 189, 248, 0.1);
+  color: #a8def8;
 }
 
 .featured-project__content {

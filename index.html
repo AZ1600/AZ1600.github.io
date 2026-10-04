@@ -1300,26 +1300,116 @@
         </article>
 
 
-        <!-- CICD -->
-        <article class="project-card">
+        <!-- AZURE INFRASTRUCTURE LAB -->
+        <article class="project-card project-card--accent">
 
           <div class="project-card__category">
-            CI/CD
+            Azure Infrastructure / AZ-104
           </div>
 
           <h3>
-            Cloud-Native CI/CD Pipeline
+            Azure Private Infrastructure Lab
           </h3>
 
           <p>
-            Automated container build and delivery workflows using
-            GitHub Actions, Docker, Amazon ECR and AWS IAM.
+            Modular Azure infrastructure built with Bicep, demonstrating
+            private compute, passwordless workload identity, scoped RBAC,
+            Azure Bastion and private Storage connectivity through
+            Azure Private Link.
           </p>
+
+
+          <ul class="project-card__proof">
+            <li>
+              Private Ubuntu VM with no public IP and verified Azure Bastion SSH access
+            </li>
+
+            <li>
+              System-assigned Managed Identity with scoped Storage Blob Data Reader RBAC
+            </li>
+
+            <li>
+              Blob Private Endpoint and Private DNS resolving Storage over the private VNet path
+            </li>
+
+            <li>
+              Azure What-If, Network Watcher and deployment-operation troubleshooting evidence
+            </li>
+          </ul>
+
+
+          <div class="tech-stack">
+            <span>Azure</span>
+            <span>Bicep</span>
+            <span>Azure Bastion</span>
+            <span>Managed Identity</span>
+            <span>Azure RBAC</span>
+            <span>Private Link</span>
+            <span>Private DNS</span>
+            <span>Network Watcher</span>
+          </div>
+
+
+          <a
+            class="project-card__link"
+            href="https://github.com/AZ1600/az104-azure-infrastructure-lab"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Project →
+          </a>
+
+        </article>
+
+
+        <!-- CICD -->
+        <article class="project-card project-card--accent">
+
+          <div class="project-card__category">
+            CI/CD / Container Security
+          </div>
+
+          <h3>
+            Secure Cloud-Native CI/CD Pipeline
+          </h3>
+
+          <p>
+            Security-focused container delivery pipeline using GitHub Actions,
+            Docker and Amazon ECR, with pull-request quality gates covering
+            container linting, vulnerability scanning, runtime hardening and
+            application smoke testing.
+          </p>
+
+
+          <ul class="project-card__proof">
+            <li>
+              Hadolint validation and reproducible digest-pinned container dependencies
+            </li>
+
+            <li>
+              Trivy blocks fixed HIGH and CRITICAL container vulnerabilities
+            </li>
+
+            <li>
+              Runtime verifies non-root UID/GID 101, read-only filesystem and dropped capabilities
+            </li>
+
+            <li>
+              Hardened smoke test runs with no-new-privileges and restricted tmpfs
+            </li>
+
+            <li>
+              Protected pull-request validation separated from manual Amazon ECR publishing
+            </li>
+          </ul>
 
 
           <div class="tech-stack">
             <span>GitHub Actions</span>
             <span>Docker</span>
+            <span>Hadolint</span>
+            <span>Trivy</span>
+            <span>NGINX</span>
             <span>Amazon ECR</span>
             <span>AWS IAM</span>
           </div>

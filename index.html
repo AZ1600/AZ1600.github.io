@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Azure, Kubernetes, Platform Engineering, DevOps, Infrastructure as Code, GitOps and cloud-native systems."
+    content="Portfolio of Olawale Azeez, Cloud and Platform Engineer specialising in AWS, Azure, Kubernetes, Platform Engineering, DevSecOps, Infrastructure as Code, GitOps, observability and AI-assisted operations."
   />
 
   <title>Olawale Azeez | Cloud & Platform Engineer</title>
@@ -53,7 +53,7 @@
     <div class="hero__content">
 
       <div class="hero-badge">
-        AWS • Azure • Kubernetes • Platform Engineering
+        AWS • Azure • Kubernetes • Platform Engineering • AI Operations
       </div>
 
       <p class="hero__intro">
@@ -72,9 +72,9 @@
 
       <p class="hero__description">
         I design and build cloud-native platforms across AWS and Azure,
-        Kubernetes workloads, internal developer tooling, Infrastructure as Code
-        and automated delivery systems with a strong focus on security,
-        reliability, developer experience and operational visibility.
+        Kubernetes workloads, internal developer tooling, Infrastructure as Code,
+        observability and AI-assisted operations with a strong focus on security,
+        reliability, developer experience and operational evidence.
       </p>
 
       <div class="hero__meta">
@@ -345,8 +345,8 @@
           <h3>Cloud</h3>
 
           <p>
-            AWS • Azure • Amazon EKS • Azure Container Apps • Lambda •
-            PostgreSQL • Key Vault • ACR • ECR • IAM • Entra ID
+            AWS • Azure • Amazon EKS • ECS Fargate • Amazon Bedrock •
+            Azure Container Apps • Lambda • ECR • ACR • IAM • Entra ID
           </p>
 
         </article>
@@ -390,11 +390,11 @@
             ↻
           </span>
 
-          <h3>Delivery</h3>
+          <h3>Delivery & Security</h3>
 
           <p>
-            GitHub Actions • CI/CD • OIDC • GitOps • Docker • ECR • ACR •
-            Deployment Validation
+            GitHub Actions • CI/CD • OIDC • GitOps • Docker • Trivy •
+            Supply-Chain Validation • Deployment Verification
           </p>
 
         </article>
@@ -422,11 +422,11 @@
             ⌁
           </span>
 
-          <h3>Engineering</h3>
+          <h3>Engineering & AI</h3>
 
           <p>
-            Python • FastAPI • TypeScript • React • Next.js • Bash •
-            PostgreSQL
+            Python • FastAPI • TypeScript • React • Next.js • Amazon Bedrock •
+            LangGraph • MCP • RAG
           </p>
 
         </article>
@@ -726,15 +726,16 @@
             </h3>
 
             <p class="project-lead">
-              Security-hardened FastAPI workload deployed and validated
-              on a real Amazon EKS environment.
+              Security-hardened FastAPI workload with real Cognito identity,
+              EKS Pod Identity and immutable deployment controls.
             </p>
 
             <p>
-              Demonstrates container hardening, immutable Amazon ECR
-              delivery, Kubernetes workload security, EKS Pod Identity,
-              least-privilege IAM, DynamoDB persistence, EventBridge
-              integration and automated CI validation.
+              Demonstrates Amazon Cognito access-token validation, tenant and
+              role extraction, non-root container hardening, Kubernetes
+              resilience controls, least-privilege AWS access, DynamoDB
+              persistence, EventBridge publishing and software supply-chain
+              validation with pip-audit, Trivy and CycloneDX SBOM generation.
             </p>
 
 
@@ -742,12 +743,12 @@
               <span>Amazon EKS</span>
               <span>Kubernetes</span>
               <span>FastAPI</span>
-              <span>Docker</span>
-              <span>Amazon ECR</span>
+              <span>Amazon Cognito</span>
+              <span>Pod Identity</span>
               <span>DynamoDB</span>
               <span>EventBridge</span>
-              <span>Pod Identity</span>
-              <span>GitHub Actions</span>
+              <span>Trivy</span>
+              <span>GitHub OIDC</span>
             </div>
 
 
@@ -773,30 +774,30 @@
             </span>
 
             <div class="evidence-row">
-              <strong>2 / 2 replicas available</strong>
+              <strong>Cognito identity validated</strong>
               <span>
-                EKS workload successfully scheduled and healthy
+                RS256/JWKS access-token validation with tenant and role context
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>STS authentication OK</strong>
+              <strong>Passwordless workload identity</strong>
               <span>
-                Pod Identity without static AWS credentials
+                EKS Pod Identity provides temporary AWS credentials
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>HTTP 200</strong>
+              <strong>Resilient Kubernetes workload</strong>
               <span>
-                Live application health validation
+                Two replicas, PDB, NetworkPolicy, probes and topology spreading
               </span>
             </div>
 
             <div class="evidence-row">
-              <strong>DynamoDB persistence</strong>
+              <strong>Supply-chain + deployment controls</strong>
               <span>
-                End-to-end application write validated
+                pip-audit, Trivy, SBOM and OIDC-based digest deployment workflow
               </span>
             </div>
 
@@ -918,6 +919,122 @@
       </article>
 
 
+      <!-- RAG OPS ASSISTANT -->
+      <article class="featured-project">
+
+        <div class="featured-project__top">
+
+          <div>
+
+            <span class="project-number">
+              05
+            </span>
+
+            <span class="featured-project__eyebrow">
+              AI Operations / Retrieval-Augmented Generation
+            </span>
+
+          </div>
+
+          <span class="project-status project-status--validated">
+            Validated on AWS
+          </span>
+
+        </div>
+
+
+        <div class="featured-project__content">
+
+          <div class="featured-project__main">
+
+            <h3>
+              RAG Ops Assistant
+            </h3>
+
+            <p class="project-lead">
+              Grounded AI operations assistant combining RAG, Amazon Bedrock,
+              MCP and LangGraph on Amazon ECS Fargate.
+            </p>
+
+            <p>
+              Uses hybrid semantic and keyword retrieval, cross-encoder
+              reranking and explicit evidence metadata to answer operational
+              questions. LangGraph controls model and tool routing, MCP exposes
+              retrieval as a reusable tool, and a hard no-evidence path prevents
+              unsupported knowledge-base answers. The application is deployed
+              as an optimized ARM64 workload with Terraform and GitHub OIDC.
+            </p>
+
+
+            <div class="tech-stack">
+              <span>Amazon Bedrock</span>
+              <span>LangGraph</span>
+              <span>MCP</span>
+              <span>RAG</span>
+              <span>FastAPI</span>
+              <span>ECS Fargate</span>
+              <span>Terraform</span>
+              <span>GitHub Actions</span>
+              <span>OIDC</span>
+            </div>
+
+
+            <div class="project-actions">
+
+              <a
+                href="https://github.com/AZ1600/rag-ops-assistant"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-evidence">
+
+            <span class="project-evidence__label">
+              AWS + AI engineering evidence
+            </span>
+
+            <div class="evidence-row">
+              <strong>Grounded retrieval</strong>
+              <span>
+                Hybrid search, cross-encoder reranking, sources and evidence metadata
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Controlled agent workflow</strong>
+              <span>
+                LangGraph + MCP with a hard no-evidence abstention path
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Real AWS runtime</strong>
+              <span>
+                ARM64 ECS Fargate, ALB, ECR, task IAM role and CloudWatch
+              </span>
+            </div>
+
+            <div class="evidence-row">
+              <strong>Automated keyless delivery</strong>
+              <span>
+                Terraform infrastructure and GitHub OIDC deployment to ECS
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
     </section>
 
 
@@ -957,17 +1074,17 @@
           </h3>
 
           <p>
-            Production-minded Amazon EKS infrastructure using reusable
-            Terraform modules, secure remote state, hardened cluster
-            defaults and automated infrastructure validation.
+            Security-focused Amazon EKS platform using reusable Terraform
+            modules, private cluster defaults, native tests, IaC scanning and
+            real AWS plan validation through GitHub OIDC.
           </p>
 
 
           <ul class="project-card__proof">
-            <li>Reusable network and EKS modules</li>
-            <li>Secure S3 remote state and state locking</li>
-            <li>Private API and control-plane logging</li>
-            <li>Automated Terraform CI validation</li>
+            <li>Native terraform test guardrails for network and EKS modules</li>
+            <li>Private API, secrets encryption and encrypted gp3 worker storage</li>
+            <li>TFLint, Trivy and Terraform CI validation</li>
+            <li>OIDC plan-only AWS workflow with short-lived credentials</li>
           </ul>
 
 
@@ -975,8 +1092,9 @@
             <span>Terraform</span>
             <span>AWS</span>
             <span>EKS</span>
-            <span>IAM</span>
-            <span>GitHub Actions</span>
+            <span>TFLint</span>
+            <span>Trivy</span>
+            <span>GitHub OIDC</span>
           </div>
 
 
@@ -1011,10 +1129,10 @@
 
 
           <ul class="project-card__proof">
-            <li>Argo CD Application reconciliation</li>
-            <li>Constrained AppProject boundaries</li>
-            <li>Kubernetes manifest validation</li>
-            <li>Argo CD CRD schema validation</li>
+            <li>Protected pull-request delivery into Git-managed desired state</li>
+            <li>Automated sync, pruning and self-healing with Argo CD</li>
+            <li>Constrained AppProject destination and repository boundaries</li>
+            <li>Yamllint + Kubeconform validation for Kubernetes and Argo CD CRDs</li>
           </ul>
 
 
@@ -1050,25 +1168,27 @@
           </h3>
 
           <p>
-            Internal Developer Platform built around Backstage for
-            service discoverability, standardised golden paths,
-            self-service scaffolding and platform workflows.
+            Production-oriented Internal Developer Platform with catalog
+            governance, secure golden paths, GitHub authentication, custom
+            authorization and enforced software supply-chain validation.
           </p>
 
 
           <ul class="project-card__proof">
-            <li>Software catalog and ownership visibility</li>
-            <li>FastAPI golden-path service template</li>
-            <li>Generated Kubernetes and CI/CD configuration</li>
-            <li>Developer self-service workflows</li>
+            <li>Software catalog with semantic relationship validation</li>
+            <li>GitHub production authentication and custom permission policy</li>
+            <li>Secure FastAPI golden path with hardened Kubernetes defaults</li>
+            <li>Non-root backend image with Trivy HIGH/CRITICAL security gate</li>
           </ul>
 
 
           <div class="tech-stack">
             <span>Backstage</span>
-            <span>Kubernetes</span>
             <span>TypeScript</span>
-            <span>GitHub</span>
+            <span>Kubernetes</span>
+            <span>GitHub Actions</span>
+            <span>Trivy</span>
+            <span>GitHub Auth</span>
           </div>
 
 
@@ -1133,10 +1253,10 @@
 
 
         <!-- OBSERVABILITY -->
-        <article class="project-card">
+        <article class="project-card project-card--accent">
 
           <div class="project-card__category">
-            Observability
+            Observability / Reliability Engineering
           </div>
 
           <h3>
@@ -1144,17 +1264,27 @@
           </h3>
 
           <p>
-            Monitoring environment focused on metrics, dashboards,
-            alerting and infrastructure visibility across cloud-native
-            workloads.
+            Reproducible observability lab covering metrics, logs, traces,
+            SLOs, error budgets, burn-rate alerts and end-to-end telemetry
+            validation across a hardened local platform stack.
           </p>
+
+
+          <ul class="project-card__proof">
+            <li>Prometheus, OpenTelemetry, Loki and Tempo signal pipeline</li>
+            <li>SLIs, SLOs, error budgets and multi-window burn-rate alerts</li>
+            <li>Prometheus rule tests plus end-to-end metric/log/trace CI checks</li>
+            <li>Non-root runtime, read-only filesystem and immutable image digests</li>
+          </ul>
 
 
           <div class="tech-stack">
             <span>Prometheus</span>
             <span>Grafana</span>
-            <span>CloudWatch</span>
-            <span>Docker</span>
+            <span>OpenTelemetry</span>
+            <span>Loki</span>
+            <span>Tempo</span>
+            <span>Alertmanager</span>
           </div>
 
 

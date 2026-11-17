@@ -1,339 +1,1538 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d18">
-  <meta name="description" content="Olawale Azeez — Cloud & Platform Engineer. AWS, Azure, Kubernetes, Terraform, DevOps and AI operations projects with verifiable tests, architecture and deployment evidence.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Olawale Azeez | Cloud & Platform Engineer">
-  <meta property="og:description" content="Engineering cloud-native platforms with security, automation, reliability and operational evidence.">
-  <meta property="og:url" content="https://az1600.github.io/">
-  <title>Olawale Azeez | Cloud &amp; Platform Engineer</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080d18">
+    <meta name="description" content="Olawale Azeez — Cloud & Platform Engineer. AWS, Azure, Kubernetes, Terraform, DevOps and AI operations projects with verifiable tests, architecture and deployment evidence.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Olawale Azeez | Cloud & Platform Engineer">
+    <meta property="og:description" content="Engineering cloud-native platforms with security, automation, reliability and operational evidence. Updated November 2026.">
+    <meta property="og:url" content="https://az1600.github.io/">
+    <title>Olawale Azeez | Cloud &amp; Platform Engineer</title>
+    <style>
     :root {
-      color-scheme: dark;
-      --bg: #080d18;
-      --surface: #101929;
-      --surface-2: #142035;
-      --border: #25344b;
-      --text: #edf3fc;
-      --muted: #a7b6ca;
-      --soft: #8ca1b9;
-      --accent: #58d5be;
-      --blue: #81aaff;
-      --purple: #bb9dff;
-      --max: 1160px;
+        color-scheme: dark;
+        --bg: #080d18;
+        --surface: #101929;
+        --surface-2: #142035;
+        --border: #25344b;
+        --text: #edf3fc;
+        --muted: #a7b6ca;
+        --soft: #8ca1b9;
+        --accent: #58d5be;
+        --blue: #81aaff;
+        --purple: #bb9dff;
+        --max: 1160px;
     }
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font:16px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-    body::before{content:"";position:absolute;top:0;left:0;right:0;height:760px;background:radial-gradient(ellipse at 80% 12%,#254b7940,transparent 55%),radial-gradient(ellipse at 15% 5%,#174d4540,transparent 55%);z-index:-1;pointer-events:none}
-    a{color:inherit;text-decoration:none}
-    a:hover{color:var(--accent)}
-    a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:4px}
-    img{display:block;max-width:100%;height:auto}
-    h1,h2,h3,h4,p{margin-top:0}
-    h1,h2,h3{line-height:1.16;letter-spacing:-.033em}
-    p{color:var(--muted)}
-    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-    .skip-link{position:absolute;top:-100px;left:20px;padding:12px 20px;background:var(--accent);color:#07131a;z-index:100}
-    .skip-link:focus{top:15px}
-    .site-header{position:sticky;top:0;z-index:50;background:#080d18ee;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .logo{display:flex;align-items:center;gap:9px;font-weight:850;font-size:18px;letter-spacing:-.04em}
-    .logo-mark{width:31px;height:31px;display:grid;place-items:center;border:1px solid #326f68;border-radius:10px;background:#133e3b;color:var(--accent);font-size:15px}
-    .nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:17px;color:#c3d1e1;font-size:12px;font-weight:730}
-    .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--accent)}
-    .nav-links .contact-nav{padding:8px 12px;border:1px solid #385a61;border-radius:9px}
-    .section{padding:80px 0}
-    .kicker{display:inline-block;color:var(--accent);text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:850}
-    .section-heading{max-width:780px;margin-bottom:35px}
-    .section-heading h2{font-size:clamp(28px,4.2vw,45px);margin:12px 0 17px}
-    .section-heading p{max-width:770px;margin-bottom:0}
-    .hero{padding:97px 0 85px}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);gap:54px;align-items:center}
-    .hero h1{font-size:clamp(39px,5.2vw,72px);max-width:760px;margin:17px 0 24px}
-    .hero h1 em{font-style:normal;color:var(--accent)}
-    .hero-lead{font-size:19px;max-width:660px;line-height:1.8}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 18px;border-radius:10px;border:1px solid #38556c;font-size:13px;font-weight:790;transition:transform .2s,background .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#07191a;background:var(--accent);border-color:var(--accent)}
-    .btn-primary:hover{color:#041514;background:#7ae9d5}
-    .btn-secondary{background:#17273a}
-    .btn-plain{border-color:transparent;color:var(--blue)}
-    .meta-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-    .meta-pills span{border:1px solid var(--border);border-radius:30px;padding:5px 11px;color:var(--muted);font-size:11px;font-weight:700}
-    .terminal{border:1px solid #315065;border-radius:17px;background:#0b1423;box-shadow:0 20px 55px #0004;overflow:hidden}
-    .terminal-head{padding:13px 18px;background:#142137;border-bottom:1px solid var(--border);color:var(--soft);font:12px ui-monospace,SFMono-Regular,Consolas,monospace}
-    .dots{color:#64dcbf;letter-spacing:3px}
-    .terminal pre{margin:0;padding:24px;white-space:pre-wrap;overflow-wrap:anywhere;color:#c9d9e9;font:12px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace}
-    .terminal .green{color:var(--accent)}
-    .terminal .blue{color:var(--blue)}
-    .hero-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:40px}
-    .highlight{border:1px solid var(--border);background:#111b2b;border-radius:12px;padding:16px}
-    .highlight strong{display:block;color:#e9f5ff;font-size:14px}
-    .highlight span{display:block;color:var(--muted);font-size:12px;margin-top:6px;line-height:1.55}
-    .card-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{background:var(--surface);border:1px solid var(--border);padding:25px;border-radius:17px}
-    .card h3{font-size:19px;margin-bottom:10px}
-    .card p{font-size:14px;margin:0}
-    .case-study{padding:35px;border:1px solid var(--border);background:var(--surface);border-radius:22px;margin-bottom:26px}
-    .case-study--primary{background:radial-gradient(circle at 95% 0%,#185d5440,transparent 52%),var(--surface);border-color:#37675e}
-    .case-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:20px}
-    .case-type{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:850}
-    .case-id{color:var(--soft);font-size:12px;font-weight:700}
-    .case-study h3{font-size:clamp(25px,3.2vw,35px);margin-bottom:12px}
-    .case-summary{max-width:850px;font-size:17px}
-    .case-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start;margin-top:26px}
-    .case-subtitle{color:#dce9f6;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.1em;margin:23px 0 9px}
-    .case-subtitle:first-child{margin-top:0}
-    .case-layout p{font-size:14px}
-    .evidence-panel{border:1px solid #2a4351;background:#0a1422;padding:23px;border-radius:14px}
-    .evidence-panel h4{font-size:15px;margin-bottom:14px}
-    .evidence-list{padding-left:20px;margin:0 0 18px;color:var(--muted)}
-    .evidence-list li{padding-left:2px;margin-bottom:9px;font-size:13px;line-height:1.65}
-    .evidence-list li::marker{color:var(--accent)}
-    .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-    .stack span{font-size:11px;font-weight:650;color:#c4d5e8;background:#223148;border:1px solid #30425b;border-radius:6px;padding:5px 9px}
-    .case-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:25px}
-    .accent-link,.case-links a{color:var(--accent);font-size:13px;font-weight:750}
-    .accent-link:hover,.case-links a:hover{text-decoration:underline}
-    .proof-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0 0}
-    .proof-chip{background:#123c37;border:1px solid #2d786c;border-radius:9px;padding:7px 11px;color:#b4f5e6;font-size:12px;font-weight:800}
-    .proof-note{color:var(--soft);font-size:12px}
-    .architecture{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-    .architecture-item{padding:20px 14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-align:center}
-    .architecture-item .number{display:block;font-size:11px;color:var(--accent);margin-bottom:8px}
-    .architecture-item strong{display:block;font-size:14px;margin-bottom:6px}
-    .architecture-item p{font-size:12px;margin:0}
-    .private-spotlight{padding:35px;border:1px solid #594778;background:radial-gradient(circle at 100% 0%,#47326342,transparent 50%),var(--surface);border-radius:22px}
-    .private-spotlight__eyebrow{color:var(--purple);text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:800}
-    .private-spotlight__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;margin-top:20px}
-    .private-spotlight h2{font-size:clamp(29px,4vw,45px);margin:8px 0 17px}
-    .private-spotlight__lead{font-size:18px}
-    .private-spotlight__note{font-size:12px;color:var(--soft)}
-    .category-heading{margin:44px 0 18px;display:flex;align-items:baseline;flex-wrap:wrap;gap:14px}
-    .category-heading h3{font-size:22px;margin:0}
-    .category-heading span{color:var(--soft);font-size:12px}
-    .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-    .project-card{display:flex;flex-direction:column;align-items:start}
-    .project-card .category{font-size:11px;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.07em}
-    .project-card h4{font-size:17px;line-height:1.3;margin:12px 0}
-    .project-card p{font-size:13px;flex:1;margin-bottom:20px}
-    .evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-    .evidence-card{background:#0d1b2a;border:1px solid var(--border);border-radius:14px;padding:23px}
-    .evidence-card h3{font-size:16px}
-    .evidence-card p{font-size:13px}
-    .contact-box{border:1px solid #37675e;border-radius:20px;padding:45px;background:radial-gradient(circle at 100% 0%,#154e4344,transparent 55%),var(--surface)}
-    .contact-box h2{font-size:clamp(28px,4vw,43px);margin:12px 0}
-    .footer{border-top:1px solid var(--border);padding:28px 0}
-    .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:20px}
-    .footer p{font-size:12px;margin:0}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
-    @media(max-width:950px){.hero-grid,.case-layout,.private-spotlight__grid{grid-template-columns:1fr}.hero{padding-top:70px}.terminal{max-width:620px}.card-grid,.project-grid,.evidence-grid,.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.architecture{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    @media(max-width:640px){html{scroll-padding-top:115px}.nav{align-items:flex-start;flex-direction:column;padding:13px 0;gap:10px}.nav-links{gap:12px;font-size:11px}.section{padding:54px 0}.hero{padding:60px 0}.hero-highlights,.card-grid,.project-grid,.skill-grid,.evidence-grid{grid-template-columns:1fr}.case-study,.private-spotlight,.contact-box{padding:23px}.architecture{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:42px}.hero-lead{font-size:17px}.container{width:min(var(--max),calc(100% - 30px))}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
-  </style>
+
+    *, * ::before, * ::after {
+        box-sizing: border-box
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px
+    }
+
+    body {
+        margin: 0;
+        min-width: 320px;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 760px;
+        background: radial-gradient(ellipse at 80% 12%, #254b7940, transparent 55%), radial-gradient(ellipse at 15% 5%, #174d4540, transparent 55%);
+        z-index: -1;
+        pointer-events: none
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none
+    }
+
+    a:hover {
+        color: var(--accent)
+    }
+
+    a:focus-visible, summary:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 5px;
+        border-radius: 4px
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto
+    }
+
+    h1, h2, h3, h4, p {
+        margin-top: 0
+    }
+
+    h1, h2, h3 {
+        line-height: 1.16;
+        letter-spacing: -.033em
+    }
+
+    p {
+        color: var(--muted)
+    }
+
+    .container {
+        width: min(var(--max), calc(100% - 40px));
+        margin-inline: auto
+    }
+
+    .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 20px;
+        padding: 12px 20px;
+        background: var(--accent);
+        color: #07131a;
+        z-index: 100
+    }
+
+    .skip-link:focus {
+        top: 15px
+    }
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: #080d18ee;
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid #ffffff12
+    }
+
+    .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-weight: 850;
+        font-size: 18px;
+        letter-spacing: -.04em
+    }
+
+    .logo-mark {
+        width: 31px;
+        height: 31px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #326f68;
+        border-radius: 10px;
+        background: #133e3b;
+        color: var(--accent);
+        font-size: 15px
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 17px;
+        color: #c3d1e1;
+        font-size: 12px;
+        font-weight: 730
+    }
+
+    .nav-links a:hover, .nav-links a[aria-current="page"] {
+        color: var(--accent)
+    }
+
+    .nav-links .contact-nav {
+        padding: 8px 12px;
+        border: 1px solid #385a61;
+        border-radius: 9px
+    }
+
+    .section {
+        padding: 80px 0
+    }
+
+    .kicker {
+        display: inline-block;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-size: 11px;
+        font-weight: 850
+    }
+
+    .section-heading {
+        max-width: 780px;
+        margin-bottom: 35px
+    }
+
+    .section-heading h2 {
+        font-size: clamp(28px, 4.2vw, 45px);
+        margin: 12px 0 17px
+    }
+
+    .section-heading p {
+        max-width: 770px;
+        margin-bottom: 0
+    }
+
+    .hero {
+        padding: 97px 0 85px
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(310px, .75fr);
+        gap: 54px;
+        align-items: center
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 5.2vw, 72px);
+        max-width: 760px;
+        margin: 17px 0 24px
+    }
+
+    .hero h1 em {
+        font-style: normal;
+        color: var(--accent)
+    }
+
+    .hero-lead {
+        font-size: 19px;
+        max-width: 660px;
+        line-height: 1.8
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 25px 0
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 12px 18px;
+        border-radius: 10px;
+        border: 1px solid #38556c;
+        font-size: 13px;
+        font-weight: 790;
+        transition: transform .2s, background .2s
+    }
+
+    .btn:hover {
+        transform: translateY(-2px)
+    }
+
+    .btn-primary {
+        color: #07191a;
+        background: var(--accent);
+        border-color: var(--accent)
+    }
+
+    .btn-primary:hover {
+        color: #041514;
+        background: #7ae9d5
+    }
+
+    .btn-secondary {
+        background: #17273a
+    }
+
+    .btn-plain {
+        border-color: transparent;
+        color: var(--blue)
+    }
+
+    .meta-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 22px
+    }
+
+    .meta-pills span {
+        border: 1px solid var(--border);
+        border-radius: 30px;
+        padding: 5px 11px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700
+    }
+
+    .terminal {
+        border: 1px solid #315065;
+        border-radius: 17px;
+        background: #0b1423;
+        box-shadow: 0 20px 55px #0004;
+        overflow: hidden
+    }
+
+    .terminal-head {
+        padding: 13px 18px;
+        background: #142137;
+        border-bottom: 1px solid var(--border);
+        color: var(--soft);
+        font: 12px ui-monospace, SFMono-Regular, Consolas, monospace
+    }
+
+    .dots {
+        color: #64dcbf;
+        letter-spacing: 3px
+    }
+
+    .terminal pre {
+        margin: 0;
+        padding: 24px;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        color: #c9d9e9;
+        font: 12px/1.9 ui-monospace, SFMono-Regular, Consolas, monospace
+    }
+
+    .terminal .green {
+        color: var(--accent)
+    }
+
+    .terminal .blue {
+        color: var(--blue)
+    }
+
+    .hero-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+        margin-top: 40px
+    }
+
+    .highlight {
+        border: 1px solid var(--border);
+        background: #111b2b;
+        border-radius: 12px;
+        padding: 16px
+    }
+
+    .highlight strong {
+        display: block;
+        color: #e9f5ff;
+        font-size: 14px
+    }
+
+    .highlight span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 6px;
+        line-height: 1.55
+    }
+
+    .card-grid, .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px
+    }
+
+    .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 25px;
+        border-radius: 17px
+    }
+
+    .card h3 {
+        font-size: 19px;
+        margin-bottom: 10px
+    }
+
+    .card p {
+        font-size: 14px;
+        margin: 0
+    }
+
+    .case-study {
+        padding: 35px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        border-radius: 22px;
+        margin-bottom: 26px
+    }
+
+    .case-study--primary {
+        background: radial-gradient(circle at 95% 0%, #185d5440, transparent 52%), var(--surface);
+        border-color: #37675e
+    }
+
+    .case-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px
+    }
+
+    .case-type {
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: 11px;
+        font-weight: 850
+    }
+
+    .case-id {
+        color: var(--soft);
+        font-size: 12px;
+        font-weight: 700
+    }
+
+    .case-study h3 {
+        font-size: clamp(25px, 3.2vw, 35px);
+        margin-bottom: 12px
+    }
+
+    .case-summary {
+        max-width: 850px;
+        font-size: 17px
+    }
+
+    .case-layout {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 30px;
+        align-items: start;
+        margin-top: 26px
+    }
+
+    .case-subtitle {
+        color: #dce9f6;
+        font-size: 12px;
+        font-weight: 850;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin: 23px 0 9px
+    }
+
+    .case-subtitle:first-child {
+        margin-top: 0
+    }
+
+    .case-layout p {
+        font-size: 14px
+    }
+
+    .evidence-panel {
+        border: 1px solid #2a4351;
+        background: #0a1422;
+        padding: 23px;
+        border-radius: 14px
+    }
+
+    .evidence-panel h4 {
+        font-size: 15px;
+        margin-bottom: 14px
+    }
+
+    .evidence-list {
+        padding-left: 20px;
+        margin: 0 0 18px;
+        color: var(--muted)
+    }
+
+    .evidence-list li {
+        padding-left: 2px;
+        margin-bottom: 9px;
+        font-size: 13px;
+        line-height: 1.65
+    }
+
+    .evidence-list li::marker {
+        color: var(--accent)
+    }
+
+    .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px
+    }
+
+    .stack span {
+        font-size: 11px;
+        font-weight: 650;
+        color: #c4d5e8;
+        background: #223148;
+        border: 1px solid #30425b;
+        border-radius: 6px;
+        padding: 5px 9px
+    }
+
+    .case-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin-top: 25px
+    }
+
+    .accent-link, .case-links a {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 750
+    }
+
+    .accent-link:hover, .case-links a:hover {
+        text-decoration: underline
+    }
+
+    .proof-strip {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 18px 0 0
+    }
+
+    .proof-chip {
+        background: #123c37;
+        border: 1px solid #2d786c;
+        border-radius: 9px;
+        padding: 7px 11px;
+        color: #b4f5e6;
+        font-size: 12px;
+        font-weight: 800
+    }
+
+    .proof-note {
+        color: var(--soft);
+        font-size: 12px
+    }
+
+    .architecture {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px
+    }
+
+    .architecture-item {
+        padding: 20px 14px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        text-align: center
+    }
+
+    .architecture-item .number {
+        display: block;
+        font-size: 11px;
+        color: var(--accent);
+        margin-bottom: 8px
+    }
+
+    .architecture-item strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 6px
+    }
+
+    .architecture-item p {
+        font-size: 12px;
+        margin: 0
+    }
+
+    .private-spotlight {
+        padding: 35px;
+        border: 1px solid #594778;
+        background: radial-gradient(circle at 100% 0%, #47326342, transparent 50%), var(--surface);
+        border-radius: 22px
+    }
+
+    .private-spotlight__eyebrow {
+        color: var(--purple);
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-size: 11px;
+        font-weight: 800
+    }
+
+    .private-spotlight__grid {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 30px;
+        margin-top: 20px
+    }
+
+    .private-spotlight h2 {
+        font-size: clamp(29px, 4vw, 45px);
+        margin: 8px 0 17px
+    }
+
+    .private-spotlight__lead {
+        font-size: 18px
+    }
+
+    .private-spotlight__note {
+        font-size: 12px;
+        color: var(--soft)
+    }
+
+    .category-heading {
+        margin: 44px 0 18px;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 14px
+    }
+
+    .category-heading h3 {
+        font-size: 22px;
+        margin: 0
+    }
+
+    .category-heading span {
+        color: var(--soft);
+        font-size: 12px
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: start
+    }
+
+    .project-card .category {
+        font-size: 11px;
+        color: var(--accent);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .07em
+    }
+
+    .project-card h4 {
+        font-size: 17px;
+        line-height: 1.3;
+        margin: 12px 0
+    }
+
+    .project-card p {
+        font-size: 13px;
+        flex: 1;
+        margin-bottom: 20px
+    }
+
+    .evidence-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px
+    }
+
+    .evidence-card {
+        background: #0d1b2a;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 23px
+    }
+
+    .evidence-card h3 {
+        font-size: 16px
+    }
+
+    .evidence-card p {
+        font-size: 13px
+    }
+
+    .contact-box {
+        border: 1px solid #37675e;
+        border-radius: 20px;
+        padding: 45px;
+        background: radial-gradient(circle at 100% 0%, #154e4344, transparent 55%), var(--surface)
+    }
+
+    .contact-box h2 {
+        font-size: clamp(28px, 4vw, 43px);
+        margin: 12px 0
+    }
+
+    .footer {
+        border-top: 1px solid var(--border);
+        padding: 28px 0
+    }
+
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px
+    }
+
+    .footer p {
+        font-size: 12px;
+        margin: 0
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: var(--muted)
+    }
+
+    @media (max-width: 950px) {
+        .hero-grid, .case-layout, .private-spotlight__grid {
+            grid-template-columns:1fr
+        }
+
+        .hero {
+            padding-top:70px
+        }
+
+        .terminal {
+            max-width:620px
+        }
+
+        .card-grid, .project-grid, .evidence-grid, .skill-grid {
+            grid-template-columns:repeat(2, minmax(0, 1fr))
+        }
+
+        .architecture {
+            grid-template-columns: repeat(3, minmax(0, 1fr))
+        }
+    }
+
+    @media (max-width: 640px) {
+        html {
+            scroll-padding-top:115px
+        }
+
+        .nav {
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 13px 0;
+            gap:10px
+        }
+
+        .nav-links {
+            gap: 12px;
+            font-size:11px
+        }
+
+        .section {
+            padding:54px 0
+        }
+
+        .hero {
+            padding:60px 0
+        }
+
+        .hero-highlights, .card-grid, .project-grid, .skill-grid, .evidence-grid {
+            grid-template-columns:1fr
+        }
+
+        .case-study, .private-spotlight, .contact-box {
+            padding:23px
+        }
+
+        .architecture {
+            grid-template-columns:repeat(2, minmax(0, 1fr))
+        }
+
+        .hero h1 {
+            font-size:42px
+        }
+
+        .hero-lead {
+            font-size:17px
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 30px))
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior:auto
+        }
+
+        .btn {
+            transition:none
+        }
+
+        .btn:hover {
+            transform: none
+        }
+    }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="container nav" aria-label="Main navigation">
-      <a class="logo" href="#home" aria-label="Olawale Azeez, home"><span class="logo-mark">OA</span><span>Olawale Azeez</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a><a href="#featured">Case Studies</a><a href="#calciosapien">CalcioSapien</a>
-        <a href="#projects">Projects</a><a href="#evidence">Evidence</a><a href="#skills">Skills</a><a class="contact-nav" href="#contact">Contact ↗</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="kicker">Cloud Engineering · Platform Engineering · DevOps</span>
-          <h1>Building cloud platforms that <em>actually operate.</em></h1>
-          <p class="hero-lead">I'm <strong style="color:var(--text)">Olawale Azeez</strong>, a Cloud &amp; Platform Engineer designing, automating, securing and operating cloud-native systems across AWS, Azure and Kubernetes.</p>
-          <p>I focus on engineering that can be <strong>deployed, validated, observed and explained</strong>—with code, tests and operational evidence behind each claim.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#featured">Explore Case Studies ↗</a>
-            <a class="btn btn-secondary" href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a class="btn btn-plain" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
-          </div>
-          <div class="meta-pills"><span>AWS Certified Developer – Associate</span><span>AWS · Azure · Kubernetes</span><span>Open to Cloud / Platform / DevOps roles</span></div>
-        </div>
-        <aside class="terminal" aria-label="Engineering profile">
-          <div class="terminal-head"><span class="dots" aria-hidden="true">● ● ●</span> &nbsp; engineering-profile</div>
-          <pre><span class="green">$ cat engineer.yaml</span>
-<span class="blue"># Engineering focus</span>
-role: cloud-platform-engineer
-cloud:
-  - aws
-  - azure
-platform:
-  - kubernetes
-  - terraform
-  - backstage
-delivery:
-  - github-actions
-  - gitops
-  - workload-identity
-operations:
-  - observability
-  - ai-assisted-workflows
-<span class="green">status: building-and-improving ✓</span></pre>
-        </aside>
-      </div>
-      <div class="container hero-highlights">
-        <div class="highlight"><strong>Cloud delivery evidence</strong><span>AWS and Azure implementations supported by infrastructure configuration and validation records.</span></div>
-        <div class="highlight"><strong>Security-first engineering</strong><span>Role boundaries, workload identity, tenant isolation and explicit approval controls.</span></div>
-        <div class="highlight"><strong>Verifiable work</strong><span>Automated tests, repository documentation, deployment evidence and known limitations.</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-heading"><span class="kicker">01 / Engineering approach</span><h2>Beyond the architecture diagram.</h2><p>I build projects around operational problems, defendable design decisions and evidence that another engineer can inspect.</p></div>
-        <div class="card-grid">
-          <article class="card"><h3>Design for operations</h3><p>I consider observability, authorization, failure modes, cloud costs and recovery alongside core functionality.</p></article>
-          <article class="card"><h3>Automate the repeatable</h3><p>Infrastructure as Code, CI/CD, GitOps and developer self-service reduce manual configuration and increase consistency.</p></article>
-          <article class="card"><h3>Make engineering verifiable</h3><p>Tests, configuration, diagrams and deployment records make it possible to distinguish a proposed design from implemented behaviour.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="featured">
-      <div class="container">
-        <div class="section-heading"><span class="kicker">02 / Selected engineering work</span><h2>Flagship case studies.</h2><p>Five public projects covering AWS AI operations, cloud risk workflows, Kubernetes observability, multi-tenant SaaS and secure Azure deployments. Each includes implementation details, technical decisions and evidence links. The separate CalcioSapien spotlight below describes a private product.</p></div>
-
-        <article class="case-study case-study--primary">
-          <div class="case-top"><span class="case-type">AWS / AI-Assisted Cloud Operations</span><span class="case-id">CASE STUDY 01</span></div>
-          <h3>RAG Ops Assistant</h3>
-          <p class="case-summary">An evidence-grounded operations assistant combining retrieval-augmented generation, Amazon Bedrock, LangGraph, MCP and a containerized AWS deployment.</p>
-          <div class="proof-strip"><span class="proof-chip">145 local tests passed</span><span class="proof-chip">AWS deployment verified</span><span class="proof-note">Temporary AWS resources were cleaned up after validation.</span></div>
-          <div class="case-layout"><div>
-            <h4 class="case-subtitle">The engineering problem</h4><p>Operations documentation is scattered across repositories and runbooks. A useful assistant needs grounded answers and must refuse unsupported or missing facts instead of inventing infrastructure details.</p>
-            <h4 class="case-subtitle">Architecture and implementation</h4><p>Python and FastAPI integrate a retrieval pipeline, LangGraph orchestration, MCP tools and Amazon Bedrock. Infrastructure is defined with Terraform and AWS ECS Fargate, with image publishing and GitHub Actions OIDC for deployment.</p>
-            <h4 class="case-subtitle">Engineering decisions</h4><p>Source references, retrieval evaluation, terminology boundaries and refusal cases are explicitly tested. The repository records live query observations and the subsequent AWS resource cleanup. The cloud endpoint is not described as permanently online.</p>
-            <div class="stack"><span>Amazon Bedrock</span><span>RAG</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>Terraform</span><span>ECS Fargate</span></div>
-            <div class="case-links">
-              <a href="https://github.com/AZ1600/rag-ops-assistant" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a>
-              <a href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/live-verification.md" target="_blank" rel="noopener noreferrer">AWS verification ↗</a>
-              <a href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/retrieval-evaluation.md" target="_blank" rel="noopener noreferrer">Retrieval evaluation ↗</a>
-              <a href="https://github.com/AZ1600/rag-ops-assistant/actions/workflows/tests.yml" target="_blank" rel="noopener noreferrer">CI tests ↗</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Olawale Azeez, home">
+                <span class="logo-mark">OA</span>
+                <span>Olawale Azeez</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#featured">Case Studies</a>
+                <a href="#recent-upgrades">Updates</a>
+                <a href="#calciosapien">CalcioSapien</a>
+                <a href="#projects">Projects</a>
+                <a href="#evidence">Evidence</a>
+                <a href="#skills">Skills</a>
+                <a class="contact-nav" href="#contact">Contact ↗</a>
             </div>
-          </div><aside class="evidence-panel"><h4>What the repository demonstrates</h4><ul class="evidence-list"><li>Retrieval and citation-aware response generation</li><li>Explicit handling of missing facts and unsupported requests</li><li>LangGraph and MCP orchestration boundaries</li><li>AWS Fargate, ALB, IAM and GitHub OIDC deployment</li><li>Live AWS evidence and cleanup verification</li><li>Automated retrieval, API and agent tests</li></ul><a class="accent-link" href="https://github.com/AZ1600/rag-ops-assistant/tree/main/docs/images" target="_blank" rel="noopener noreferrer">View evidence screenshots ↗</a></aside></div>
-        </article>
+        </nav>
+    </header>
 
-        <article class="case-study">
-          <div class="case-top"><span class="case-type">Cloud Reliability / Controlled Automation</span><span class="case-id">CASE STUDY 02</span></div>
-          <h3>CloudOps Command Center</h3>
-          <p class="case-summary">A cloud operations workspace that turns infrastructure risks into evidence-backed investigations, owner routing and approval-gated simulated remediation.</p>
-          <div class="proof-strip"><span class="proof-chip">132 application tests passed</span><span class="proof-note">Approved execution is simulated, not a claim of live infrastructure remediation.</span></div>
-          <div class="case-layout"><div><h4 class="case-subtitle">The engineering problem</h4><p>Infrastructure alerts alone do not show incident impact, responsible owners or the evidence required to make a controlled remediation decision.</p><h4 class="case-subtitle">Architecture and implementation</h4><p>Next.js, TypeScript and PostgreSQL support risk processing, Decision Traces, service ownership, operational findings and workflow records. A shared contract accepts structured findings from PlatformPilot.</p><h4 class="case-subtitle">Engineering decisions</h4><p>Authenticated API routes, role permissions and workspace isolation protect operations. Humans must approve simulated remediation; evidence and decision records remain separate from external execution.</p><div class="stack"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>RBAC</span><span>Decision Trace</span><span>CI/CD</span></div><div class="case-links"><a href="https://github.com/AZ1600/cloudops-command-center" target="_blank" rel="noopener noreferrer">Source &amp; case study ↗</a><a href="https://github.com/AZ1600/cloudops-command-center/tree/main/tests" target="_blank" rel="noopener noreferrer">Automated tests ↗</a><a href="https://github.com/AZ1600/cloudops-command-center/tree/main/contracts" target="_blank" rel="noopener noreferrer">Integration contracts ↗</a></div></div><aside class="evidence-panel"><h4>What the repository demonstrates</h4><ul class="evidence-list"><li>Risk classification, evidence and Decision Traces</li><li>Service ownership and operational routing</li><li>RBAC and PostgreSQL workspace isolation</li><li>Approval gates and audit history</li><li>Controlled, simulated execution workflows</li><li>Tested integration contract with PlatformPilot</li></ul><a class="accent-link" href="https://github.com/AZ1600/cloudops-command-center/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect workflow screenshots ↗</a></aside></div>
-        </article>
+    <main id="main">
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="kicker">Cloud Engineering · Platform Engineering · DevOps</span>
+                    <h1>
+                        Building cloud platforms that 
+                        <em>actually operate.</em>
+                    </h1>
+                    <p class="hero-lead">
+                        I'm 
+                        <strong style="color:var(--text)">Olawale Azeez</strong>
+                        , a Cloud &amp; Platform Engineer designing, automating, securing and operating cloud-native systems across AWS, Azure and Kubernetes.
+                    </p>
+                    <p>
+                        I focus on engineering that can be 
+                        <strong>deployed, validated, observed and explained</strong>
+                        —with code, tests and operational evidence behind each claim.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#featured">Explore Case Studies ↗</a>
+                        <a class="btn btn-secondary" href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a class="btn btn-plain" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+                    </div>
+                    <div class="meta-pills">
+                        <span>AWS Certified Developer – Associate</span>
+                        <span>AWS · Azure · Kubernetes</span>
+                        <span>Open to Cloud / Platform / DevOps roles</span>
+                    </div>
+                </div>
+                <aside class="terminal" aria-label="Engineering profile">
+                    <div class="terminal-head">
+                        <span class="dots" aria-hidden="true">● ● ●</span>
+                         &nbsp; engineering-profile
+                    </div>
+                    <pre>
+                        <span class="green">$ cat engineer.yaml</span>
+                        <span class="blue"># Engineering focus</span>
 
-        <article class="case-study">
-          <div class="case-top"><span class="case-type">Kubernetes / Platform Operations</span><span class="case-id">CASE STUDY 03</span></div>
-          <h3>PlatformPilot</h3>
-          <p class="case-summary">A Kubernetes operations platform connecting cluster visibility, workload diagnostics, Prometheus monitoring, role-based access and structured operational findings.</p>
-          <div class="proof-strip"><span class="proof-chip">44 backend tests passed</span><span class="proof-chip">Frontend audit: 0 findings</span><span class="proof-note">Local verification during the October 2026 repository upgrade.</span></div>
-          <div class="case-layout"><div><h4 class="case-subtitle">The engineering problem</h4><p>Engineers investigating unhealthy workloads often switch between metrics, Kubernetes objects, events and logs. A unified view can reduce the effort needed to build incident context.</p><h4 class="case-subtitle">Architecture and implementation</h4><p>React, FastAPI, the Kubernetes Python Client and Prometheus provide resource-focused APIs for pods, nodes, namespaces and deployments. Operational analysis generates additional context.</p><h4 class="case-subtitle">Engineering decisions</h4><p>Viewer, operator and admin access boundaries protect API operations. Structured findings can be exported to CloudOps Command Center while investigation remains separate from approval and remediation.</p><div class="stack"><span>Kubernetes</span><span>FastAPI</span><span>React</span><span>Prometheus</span><span>Python</span><span>RBAC</span></div><div class="case-links"><a href="https://github.com/AZ1600/platform-pilot" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a><a href="https://github.com/AZ1600/platform-pilot/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer">Architecture ↗</a><a href="https://github.com/AZ1600/platform-pilot/tree/main/backend/tests" target="_blank" rel="noopener noreferrer">Backend tests ↗</a></div></div><aside class="evidence-panel"><h4>What the repository demonstrates</h4><ul class="evidence-list"><li>Cluster resource investigation</li><li>Prometheus-based operational monitoring</li><li>Protected FastAPI endpoints and RBAC</li><li>Structured operational-finding export</li><li>Automated security and API tests</li><li>Architecture documentation and UI screenshots</li></ul><a class="accent-link" href="https://github.com/AZ1600/platform-pilot/tree/main/screenshots" target="_blank" rel="noopener noreferrer">View product screenshots ↗</a></aside></div>
-        </article>
+                        role: cloud-platform-engineer
+                        cloud:
+                          - aws
+                          - azure
+                        platform:
+                          - kubernetes
+                          - terraform
+                          - backstage
+                        delivery:
+                          - github-actions
+                          - gitops
+                          - workload-identity
+                        operations:
+                          - observability
+                          - ai-assisted-workflows
+                        <span class="green">status: building-and-improving ✓</span>
+                    </pre>
+                </aside>
+            </div>
+            <div class="container hero-highlights">
+                <div class="highlight">
+                    <strong>Cloud delivery evidence</strong>
+                    <span>AWS and Azure implementations supported by infrastructure configuration and validation records.</span>
+                </div>
+                <div class="highlight">
+                    <strong>Security-first engineering</strong>
+                    <span>Role boundaries, workload identity, tenant isolation and explicit approval controls.</span>
+                </div>
+                <div class="highlight">
+                    <strong>Verifiable work</strong>
+                    <span>Automated tests, repository documentation, deployment evidence and known limitations.</span>
+                </div>
+            </div>
+        </section>
 
-        <article class="case-study">
-          <div class="case-top"><span class="case-type">Full-Stack SaaS / AI-Assisted Operations</span><span class="case-id">CASE STUDY 04</span></div>
-          <h3>OpsPilot SaaS</h3>
-          <p class="case-summary">A multi-tenant business operations platform that turns fragmented signals into prioritized recommendations, human-approved actions and trackable workflow records.</p>
-          <div class="proof-strip"><span class="proof-chip">304 application tests passed</span><span class="proof-chip">54 PostgreSQL tests passed</span><span class="proof-chip">npm audit: 0 findings</span></div>
-          <div class="case-layout"><div><h4 class="case-subtitle">The engineering problem</h4><p>Business signals across inboxes, notes and customer interactions are easy to miss. Turning them into accountable, authorized action requires reliable workflow and tenant boundaries.</p><h4 class="case-subtitle">Architecture and implementation</h4><p>Next.js, TypeScript, Clerk and PostgreSQL underpin workspace authentication, role authorization, signal ingestion, action approvals, execution records and Stripe billing foundations.</p><h4 class="case-subtitle">Engineering decisions</h4><p>Business-scoped access, approval attribution and transactional idempotency are tested against PostgreSQL. Public demo workflows remain separate from authenticated tenant data. Financial impact is estimated, not verified revenue recovery.</p><div class="stack"><span>Next.js</span><span>TypeScript</span><span>Clerk</span><span>PostgreSQL</span><span>Stripe</span><span>Vitest</span></div><div class="case-links"><a href="https://github.com/AZ1600/opspilot-saas" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a><a href="https://github.com/AZ1600/opspilot-saas/tree/main/tests" target="_blank" rel="noopener noreferrer">Unit &amp; integration tests ↗</a><a href="https://github.com/AZ1600/opspilot-saas/blob/main/database/schema.sql" target="_blank" rel="noopener noreferrer">Database schema ↗</a><a href="https://github.com/AZ1600/opspilot-saas/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer">CI workflow ↗</a></div></div><aside class="evidence-panel"><h4>What the repository demonstrates</h4><ul class="evidence-list"><li>Multi-tenant workspaces and permission boundaries</li><li>Clerk authentication and PostgreSQL persistence</li><li>Idempotent approval records and audit attribution</li><li>Human-reviewed action recommendations</li><li>Stripe and Gmail read-only connector foundations</li><li>358 combined local application and PostgreSQL tests</li></ul><a class="accent-link" href="https://github.com/AZ1600/opspilot-saas/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">View application screenshots ↗</a></aside></div>
-        </article>
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">01 / Engineering approach</span>
+                    <h2>Beyond the architecture diagram.</h2>
+                    <p>I build projects around operational problems, defendable design decisions and evidence that another engineer can inspect.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Design for operations</h3>
+                        <p>I consider observability, authorization, failure modes, cloud costs and recovery alongside core functionality.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Automate the repeatable</h3>
+                        <p>Infrastructure as Code, CI/CD, GitOps and developer self-service reduce manual configuration and increase consistency.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Make engineering verifiable</h3>
+                        <p>Tests, configuration, diagrams and deployment records make it possible to distinguish a proposed design from implemented behaviour.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <article class="case-study">
-          <div class="case-top"><span class="case-type">Microsoft Azure / Secure Application Platform</span><span class="case-id">CASE STUDY 05</span></div>
-          <h3>PropertyOps AI Agent</h3>
-          <p class="case-summary">An Azure property operations platform demonstrating identity, private networking, infrastructure automation, controlled maintenance workflows and observable application hosting.</p>
-          <div class="case-layout"><div><h4 class="case-subtitle">The engineering problem</h4><p>Operational applications need secure access, repeatable infrastructure and observable behaviour, not just business functionality.</p><h4 class="case-subtitle">Architecture and implementation</h4><p>FastAPI, PostgreSQL and Azure Container Apps integrate with Microsoft Entra ID, managed identity, Key Vault, Application Insights and Bicep infrastructure.</p><h4 class="case-subtitle">Engineering decisions</h4><p>Private endpoints and network boundaries protect supported data services. GitHub OIDC minimizes long-lived deployment credentials, while approval and audit tests validate sensitive workflow boundaries.</p><div class="stack"><span>Azure</span><span>FastAPI</span><span>Bicep</span><span>PostgreSQL</span><span>Entra ID</span><span>Private Link</span><span>OIDC</span></div><div class="case-links"><a href="https://github.com/AZ1600/AI-property-operations" target="_blank" rel="noopener noreferrer">Source &amp; case study ↗</a><a href="https://github.com/AZ1600/AI-property-operations/tree/main/infra" target="_blank" rel="noopener noreferrer">Bicep infrastructure ↗</a><a href="https://github.com/AZ1600/AI-property-operations/tree/main/tests" target="_blank" rel="noopener noreferrer">Workflow tests ↗</a></div></div><aside class="evidence-panel"><h4>What the repository demonstrates</h4><ul class="evidence-list"><li>Azure Container Apps and PostgreSQL architecture</li><li>Microsoft Entra ID access control</li><li>Managed identity and Key Vault configuration</li><li>Private networking and DNS</li><li>Bicep and GitHub OIDC CI/CD</li><li>Maintenance approval and audit tests</li></ul><a class="accent-link" href="https://github.com/AZ1600/AI-property-operations/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect Azure deployment evidence ↗</a></aside></div>
-        </article>
-        <p style="font-size:12px;color:var(--soft)">Test totals are local validation results recorded during October 2026 improvements, not uptime guarantees or independent security certification.</p>
-      </div>
-    </section>
+        <section class="section" id="featured">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">02 / Selected engineering work</span>
+                    <h2>Flagship case studies.</h2>
+                    <p>Five public projects covering AWS AI operations, cloud risk workflows, Kubernetes observability, multi-tenant SaaS and secure Azure deployments. Each includes implementation details, technical decisions and evidence links. The separate CalcioSapien spotlight below describes a private product.</p>
+                </div>
 
-    <section class="section" id="calciosapien" aria-labelledby="calciosapien-title">
-      <div class="container"><div class="private-spotlight">
-        <span class="private-spotlight__eyebrow">Private product · Independent engineering project</span>
-        <div class="private-spotlight__grid"><div><span class="kicker">Football intelligence &amp; decision governance</span><h2 id="calciosapien-title">CalcioSapien</h2>
-          <p class="private-spotlight__lead">A private football intelligence platform connecting sourced player evidence to accountable recruitment decisions.</p>
-          <p>The product models data provenance, scouting observations, recruitment shortlists, scenario analysis, board authorization, negotiation workflows and audit history.</p>
-          <p>Built with FastAPI and React, persistent workflows, role-scoped permissions, backend tests, CI checks and documented private-hosting, backup and recovery considerations. Deterministic scoring is distinguished from opt-in model assistance.</p>
-          <div class="stack"><span>Python / FastAPI</span><span>React</span><span>Data provenance</span><span>Decision workflows</span><span>RBAC</span><span>Docker / CI</span></div>
-          <div class="hero-actions"><a class="btn btn-secondary" href="#contact">Enquire about a private walkthrough ↗</a></div>
-          <p class="private-spotlight__note">Public-safe overview only. Source code, licensed datasets, accounts and deployment details are intentionally private. This is a developing product, not a claim of commercial adoption.</p>
-        </div><aside class="evidence-panel"><h4>Engineering highlights</h4><ul class="evidence-list"><li>Traceable evidence and guarded data import</li><li>Scout-to-shortlist-to-decision workflows</li><li>Explicit approvals and role authorization</li><li>Audit records and reporting</li><li>Automated backend tests and CI checks</li><li>Private deployment and recovery design</li></ul></aside></div>
-      </div></div>
-    </section>
+                <article class="case-study case-study--primary">
+                    <div class="case-top">
+                        <span class="case-type">AWS / AI-Assisted Cloud Operations</span>
+                        <span class="case-id">CASE STUDY 01</span>
+                    </div>
+                    <h3>RAG Ops Assistant</h3>
+                    <p class="case-summary">An evidence-grounded operations assistant combining retrieval-augmented generation, Amazon Bedrock, LangGraph, MCP and a containerized AWS deployment.</p>
+                    <div class="proof-strip">
+                        <span class="proof-chip">145 local tests passed</span>
+                        <span class="proof-chip">AWS deployment verified</span>
+                        <span class="proof-note">Temporary AWS resources were cleaned up after validation.</span>
+                    </div>
+                    <div class="case-layout">
+                        <div>
+                            <h4 class="case-subtitle">The engineering problem</h4>
+                            <p>Operations documentation is scattered across repositories and runbooks. A useful assistant needs grounded answers and must refuse unsupported or missing facts instead of inventing infrastructure details.</p>
+                            <h4 class="case-subtitle">Architecture and implementation</h4>
+                            <p>Python and FastAPI integrate a retrieval pipeline, LangGraph orchestration, MCP tools and Amazon Bedrock. Infrastructure is defined with Terraform and AWS ECS Fargate, with image publishing and GitHub Actions OIDC for deployment.</p>
+                            <h4 class="case-subtitle">Engineering decisions</h4>
+                            <p>Source references, retrieval evaluation, terminology boundaries and refusal cases are explicitly tested. The repository records live query observations and the subsequent AWS resource cleanup. The cloud endpoint is not described as permanently online.</p>
+                            <div class="stack">
+                                <span>Amazon Bedrock</span>
+                                <span>RAG</span>
+                                <span>LangGraph</span>
+                                <span>MCP</span>
+                                <span>FastAPI</span>
+                                <span>Terraform</span>
+                                <span>ECS Fargate</span>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://github.com/AZ1600/rag-ops-assistant" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a>
+                                <a href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/live-verification.md" target="_blank" rel="noopener noreferrer">AWS verification ↗</a>
+                                <a href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/retrieval-evaluation.md" target="_blank" rel="noopener noreferrer">Retrieval evaluation ↗</a>
+                                <a href="https://github.com/AZ1600/rag-ops-assistant/actions/workflows/tests.yml" target="_blank" rel="noopener noreferrer">CI tests ↗</a>
+                            </div>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>What the repository demonstrates</h4>
+                            <ul class="evidence-list">
+                                <li>Retrieval and citation-aware response generation</li>
+                                <li>Explicit handling of missing facts and unsupported requests</li>
+                                <li>LangGraph and MCP orchestration boundaries</li>
+                                <li>AWS Fargate, ALB, IAM and GitHub OIDC deployment</li>
+                                <li>Live AWS evidence and cleanup verification</li>
+                                <li>Automated retrieval, API and agent tests</li>
+                            </ul>
+                            <a class="accent-link" href="https://github.com/AZ1600/rag-ops-assistant/tree/main/docs/images" target="_blank" rel="noopener noreferrer">View evidence screenshots ↗</a>
+                        </aside>
+                    </div>
+                </article>
 
-    <section class="section" id="process"><div class="container"><div class="section-heading"><span class="kicker">03 / Delivery method</span><h2>From design to reliable operations.</h2><p>My engineering approach connects implementation with repeatable delivery, validation and operational evidence.</p></div><div class="architecture">
-      <div class="architecture-item"><span class="number">STEP 01</span><strong>Design</strong><p>Requirements, trade-offs and security boundaries</p></div>
-      <div class="architecture-item"><span class="number">STEP 02</span><strong>Build</strong><p>Terraform, Bicep, cloud services and applications</p></div>
-      <div class="architecture-item"><span class="number">STEP 03</span><strong>Validate</strong><p>Tests, lint, typecheck and security audits</p></div>
-      <div class="architecture-item"><span class="number">STEP 04</span><strong>Deliver</strong><p>CI/CD, containers, OIDC and GitOps</p></div>
-      <div class="architecture-item"><span class="number">STEP 05</span><strong>Operate</strong><p>Metrics, logs, alerts and evidence</p></div>
-    </div></div></section>
+                <article class="case-study">
+                    <div class="case-top">
+                        <span class="case-type">Cloud Reliability / Controlled Automation</span>
+                        <span class="case-id">CASE STUDY 02</span>
+                    </div>
+                    <h3>CloudOps Command Center</h3>
+                    <p class="case-summary">A cloud operations workspace that turns infrastructure risks into evidence-backed investigations, owner routing and approval-gated simulated remediation.</p>
+                    <div class="proof-strip">
+                        <span class="proof-chip">132 application tests passed</span>
+                        <span class="proof-note">Approved execution is simulated, not a claim of live infrastructure remediation.</span>
+                    </div>
+                    <div class="case-layout">
+                        <div>
+                            <h4 class="case-subtitle">The engineering problem</h4>
+                            <p>Infrastructure alerts alone do not show incident impact, responsible owners or the evidence required to make a controlled remediation decision.</p>
+                            <h4 class="case-subtitle">Architecture and implementation</h4>
+                            <p>Next.js, TypeScript and PostgreSQL support risk processing, Decision Traces, service ownership, operational findings and workflow records. A shared contract accepts structured findings from PlatformPilot.</p>
+                            <h4 class="case-subtitle">Engineering decisions</h4>
+                            <p>Authenticated API routes, role permissions and workspace isolation protect operations. Humans must approve simulated remediation; evidence and decision records remain separate from external execution.</p>
+                            <div class="stack">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>PostgreSQL</span>
+                                <span>RBAC</span>
+                                <span>Decision Trace</span>
+                                <span>CI/CD</span>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://github.com/AZ1600/cloudops-command-center" target="_blank" rel="noopener noreferrer">Source &amp; case study ↗</a>
+                                <a href="https://github.com/AZ1600/cloudops-command-center/tree/main/tests" target="_blank" rel="noopener noreferrer">Automated tests ↗</a>
+                                <a href="https://github.com/AZ1600/cloudops-command-center/tree/main/contracts" target="_blank" rel="noopener noreferrer">Integration contracts ↗</a>
+                            </div>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>What the repository demonstrates</h4>
+                            <ul class="evidence-list">
+                                <li>Risk classification, evidence and Decision Traces</li>
+                                <li>Service ownership and operational routing</li>
+                                <li>RBAC and PostgreSQL workspace isolation</li>
+                                <li>Approval gates and audit history</li>
+                                <li>Controlled, simulated execution workflows</li>
+                                <li>Tested integration contract with PlatformPilot</li>
+                            </ul>
+                            <a class="accent-link" href="https://github.com/AZ1600/cloudops-command-center/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect workflow screenshots ↗</a>
+                        </aside>
+                    </div>
+                </article>
 
-    <section class="section" id="projects"><div class="container"><div class="section-heading"><span class="kicker">04 / More engineering projects</span><h2>Explore the engineering portfolio.</h2><p>Supporting projects organized by discipline, complementing the flagship case studies above.</p></div>
-      <div class="category-heading"><h3>Cloud Infrastructure &amp; Security</h3><span>Provisioning · workload security · cloud platforms</span></div><div class="project-grid">
-        <article class="card project-card"><span class="category">AWS / Kubernetes</span><h4>Pharmacy API on Amazon EKS</h4><p>FastAPI, Amazon Cognito, EKS Pod Identity, DynamoDB, resilience controls, CI/CD and container supply-chain validation.</p><a class="accent-link" href="https://github.com/AZ1600/pharmacy-api-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Infrastructure as Code</span><h4>Terraform AWS EKS Platform</h4><p>Modular Terraform, private networking, automated guardrail tests, IaC scanning and AWS OIDC plan workflows.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-terraform-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Microsoft Azure / Bicep</span><h4>AZ-104 Azure Infrastructure Lab</h4><p>Private VMs, Bastion, managed identities, RBAC, Private Link, backup and deployment verification using Azure and Bicep.</p><a class="accent-link" href="https://github.com/AZ1600/az104-azure-infrastructure-lab" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-      </div>
-      <div class="category-heading"><h3>Developer Platforms &amp; Delivery</h3><span>Self-service · CI/CD · GitOps</span></div><div class="project-grid">
-        <article class="card project-card"><span class="category">Internal Developer Platform</span><h4>Backstage Developer Portal</h4><p>Backstage software catalog, reusable service templates, golden paths, governance and developer self-service.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-backstage-portal" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Supply-Chain Security</span><h4>Platform Engineering CI/CD</h4><p>Container scans, AWS ECR publishing, GitHub OIDC, SBOMs and artifact attestations.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-cicd-pipeline" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">GitOps / Kubernetes</span><h4>Argo CD GitOps Platform</h4><p>Declarative Kubernetes delivery, pull-request validation, Argo CD reconciliation and release configuration.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-gitops-argocd" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Developer Self-Service</span><h4>Backstage Generated Inventory API</h4><p>A FastAPI service created from a Backstage golden path with container, Kubernetes, CI and test support.</p><a class="accent-link" href="https://github.com/AZ1600/backstage-generated-inventory-api" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-      </div>
-      <div class="category-heading"><h3>Observability &amp; AI Engineering</h3><span>Telemetry · retrieval · automation</span></div><div class="project-grid">
-        <article class="card project-card"><span class="category">Site Reliability Engineering</span><h4>Platform Observability Stack</h4><p>Prometheus, Grafana, OpenTelemetry, Loki, Tempo, SLO monitoring, error-budget alerts and rule validation.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-observability" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">AI Workflow Automation</span><h4>AI Resume Analyzer</h4><p>Resume evidence extraction, explainable skill scoring, n8n workflows and AWS Bedrock analysis.</p><a class="accent-link" href="https://github.com/AZ1600/ai-resume-analyzer-n8n" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Serverless Automation</span><h4>AI Content Automation Platform</h4><p>AWS Lambda and SAM workflows for content planning, approvals, OAuth connection, scheduling and publishing.</p><a class="accent-link" href="https://github.com/AZ1600/AI-Powered-Content-Automation-Platform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-      </div>
-      <div class="category-heading"><h3>Applications &amp; Engineering Knowledge</h3><span>Serverless systems · documentation</span></div><div class="project-grid">
-        <article class="card project-card"><span class="category">Serverless Application</span><h4>Cloud-Native Pharmacy Platform</h4><p>React, AWS Lambda, tenant-aware workflows, event processing and automated tests for pharmacy inventory.</p><a class="accent-link" href="https://github.com/AZ1600/CloudNativePharmacyPlatform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></article>
-        <article class="card project-card"><span class="category">Engineering Knowledge Base</span><h4>Cloud &amp; Platform Engineering Handbook</h4><p>A published technical handbook linking architecture, cloud labs, troubleshooting and platform engineering patterns.</p><a class="accent-link" href="https://cloud-platform-engineering-handbook.vercel.app/" target="_blank" rel="noopener noreferrer">Read the handbook ↗</a></article>
-      </div>
-    </div></section>
+                <article class="case-study">
+                    <div class="case-top">
+                        <span class="case-type">Kubernetes / Platform Operations</span>
+                        <span class="case-id">CASE STUDY 03</span>
+                    </div>
+                    <h3>PlatformPilot</h3>
+                    <p class="case-summary">A Kubernetes operations platform connecting cluster visibility, workload diagnostics, Prometheus monitoring, role-based access and structured operational findings.</p>
+                    <div class="proof-strip">
+                        <span class="proof-chip">44 backend tests passed</span>
+                        <span class="proof-chip">Frontend audit: 0 findings</span>
+                        <span class="proof-note">Local verification during the October 2026 repository upgrade.</span>
+                    </div>
+                    <div class="case-layout">
+                        <div>
+                            <h4 class="case-subtitle">The engineering problem</h4>
+                            <p>Engineers investigating unhealthy workloads often switch between metrics, Kubernetes objects, events and logs. A unified view can reduce the effort needed to build incident context.</p>
+                            <h4 class="case-subtitle">Architecture and implementation</h4>
+                            <p>React, FastAPI, the Kubernetes Python Client and Prometheus provide resource-focused APIs for pods, nodes, namespaces and deployments. Operational analysis generates additional context.</p>
+                            <h4 class="case-subtitle">Engineering decisions</h4>
+                            <p>Viewer, operator and admin access boundaries protect API operations. Structured findings can be exported to CloudOps Command Center while investigation remains separate from approval and remediation.</p>
+                            <div class="stack">
+                                <span>Kubernetes</span>
+                                <span>FastAPI</span>
+                                <span>React</span>
+                                <span>Prometheus</span>
+                                <span>Python</span>
+                                <span>RBAC</span>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://github.com/AZ1600/platform-pilot" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a>
+                                <a href="https://github.com/AZ1600/platform-pilot/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer">Architecture ↗</a>
+                                <a href="https://github.com/AZ1600/platform-pilot/tree/main/backend/tests" target="_blank" rel="noopener noreferrer">Backend tests ↗</a>
+                            </div>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>What the repository demonstrates</h4>
+                            <ul class="evidence-list">
+                                <li>Cluster resource investigation</li>
+                                <li>Prometheus-based operational monitoring</li>
+                                <li>Protected FastAPI endpoints and RBAC</li>
+                                <li>Structured operational-finding export</li>
+                                <li>Automated security and API tests</li>
+                                <li>Architecture documentation and UI screenshots</li>
+                            </ul>
+                            <a class="accent-link" href="https://github.com/AZ1600/platform-pilot/tree/main/screenshots" target="_blank" rel="noopener noreferrer">View product screenshots ↗</a>
+                        </aside>
+                    </div>
+                </article>
 
-    <section class="section" id="evidence"><div class="container"><div class="section-heading"><span class="kicker">05 / Verifiable engineering</span><h2>Explore the evidence behind the work.</h2><p>Inspect the tests, architecture decisions and delivery records rather than relying on project descriptions alone.</p></div><div class="evidence-grid">
-      <article class="evidence-card"><h3>01 — Bedrock and AWS validation</h3><p>Inspect grounded retrieval evaluation, live AWS tests, security boundaries and documented resource cleanup.</p><a class="accent-link" href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/live-verification.md" target="_blank" rel="noopener noreferrer">Review RAG Ops verification ↗</a></article>
-      <article class="evidence-card"><h3>02 — PostgreSQL tenant isolation</h3><p>Read database integration tests for authentication, workspace isolation, approvals and idempotency.</p><a class="accent-link" href="https://github.com/AZ1600/opspilot-saas/tree/main/tests/integration" target="_blank" rel="noopener noreferrer">Inspect OpsPilot database tests ↗</a></article>
-      <article class="evidence-card"><h3>03 — Kubernetes access control</h3><p>Review protected APIs, permission tests, and structured operational findings.</p><a class="accent-link" href="https://github.com/AZ1600/platform-pilot/tree/main/backend/tests" target="_blank" rel="noopener noreferrer">Inspect PlatformPilot tests ↗</a></article>
-      <article class="evidence-card"><h3>04 — Controlled automation</h3><p>Explore risk validation, Decision Traces, human approval gates and simulated remediation records.</p><a class="accent-link" href="https://github.com/AZ1600/cloudops-command-center/tree/main/tests" target="_blank" rel="noopener noreferrer">Inspect CloudOps tests ↗</a></article>
-      <article class="evidence-card"><h3>05 — Azure deployment</h3><p>Review Bicep infrastructure, managed identity and private networking evidence.</p><a class="accent-link" href="https://github.com/AZ1600/AI-property-operations/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect Azure evidence ↗</a></article>
-      <article class="evidence-card"><h3>06 — Infrastructure testing</h3><p>Inspect Terraform modules, guardrails, security checks and repeatable delivery workflows.</p><a class="accent-link" href="https://github.com/AZ1600/platform-engineering-terraform-eks/tree/main/modules" target="_blank" rel="noopener noreferrer">Inspect Terraform modules ↗</a></article>
-    </div></div></section>
+                <article class="case-study">
+                    <div class="case-top">
+                        <span class="case-type">Full-Stack SaaS / AI-Assisted Operations</span>
+                        <span class="case-id">CASE STUDY 04</span>
+                    </div>
+                    <h3>OpsPilot SaaS</h3>
+                    <p class="case-summary">A multi-tenant business operations platform that turns fragmented signals into prioritized recommendations, human-approved actions and trackable workflow records.</p>
+                    <div class="proof-strip">
+                        <span class="proof-chip">304 application tests passed</span>
+                        <span class="proof-chip">54 PostgreSQL tests passed</span>
+                        <span class="proof-chip">npm audit: 0 findings</span>
+                    </div>
+                    <div class="case-layout">
+                        <div>
+                            <h4 class="case-subtitle">The engineering problem</h4>
+                            <p>Business signals across inboxes, notes and customer interactions are easy to miss. Turning them into accountable, authorized action requires reliable workflow and tenant boundaries.</p>
+                            <h4 class="case-subtitle">Architecture and implementation</h4>
+                            <p>Next.js, TypeScript, Clerk and PostgreSQL underpin workspace authentication, role authorization, signal ingestion, action approvals, execution records and Stripe billing foundations.</p>
+                            <h4 class="case-subtitle">Engineering decisions</h4>
+                            <p>Business-scoped access, approval attribution and transactional idempotency are tested against PostgreSQL. Public demo workflows remain separate from authenticated tenant data. Financial impact is estimated, not verified revenue recovery.</p>
+                            <div class="stack">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>Clerk</span>
+                                <span>PostgreSQL</span>
+                                <span>Stripe</span>
+                                <span>Vitest</span>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://github.com/AZ1600/opspilot-saas" target="_blank" rel="noopener noreferrer">Source &amp; README ↗</a>
+                                <a href="https://github.com/AZ1600/opspilot-saas/tree/main/tests" target="_blank" rel="noopener noreferrer">Unit &amp; integration tests ↗</a>
+                                <a href="https://github.com/AZ1600/opspilot-saas/blob/main/database/schema.sql" target="_blank" rel="noopener noreferrer">Database schema ↗</a>
+                                <a href="https://github.com/AZ1600/opspilot-saas/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer">CI workflow ↗</a>
+                            </div>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>What the repository demonstrates</h4>
+                            <ul class="evidence-list">
+                                <li>Multi-tenant workspaces and permission boundaries</li>
+                                <li>Clerk authentication and PostgreSQL persistence</li>
+                                <li>Idempotent approval records and audit attribution</li>
+                                <li>Human-reviewed action recommendations</li>
+                                <li>Stripe and Gmail read-only connector foundations</li>
+                                <li>358 combined local application and PostgreSQL tests</li>
+                            </ul>
+                            <a class="accent-link" href="https://github.com/AZ1600/opspilot-saas/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">View application screenshots ↗</a>
+                        </aside>
+                    </div>
+                </article>
 
-    <section class="section" id="skills"><div class="container"><div class="section-heading"><span class="kicker">06 / Engineering toolkit</span><h2>Core engineering stack.</h2><p>Tools used across hands-on infrastructure, platform, application and AI operations projects.</p></div><div class="skill-grid">
-      <article class="card"><h3>Cloud Platforms</h3><p>AWS: ECS, EKS, IAM, Lambda, Bedrock, CloudWatch. Azure: Container Apps, VMs, Entra ID, Key Vault, networking.</p></article>
-      <article class="card"><h3>Infrastructure as Code</h3><p>Terraform, Bicep, AWS SAM, GitHub OIDC and policy/security checks.</p></article>
-      <article class="card"><h3>Containers &amp; Kubernetes</h3><p>Docker, Kubernetes, EKS, Helm, Argo CD, Prometheus and workload diagnostics.</p></article>
-      <article class="card"><h3>CI/CD &amp; DevSecOps</h3><p>GitHub Actions, pipeline testing, vulnerability scanning, SBOMs and supply-chain controls.</p></article>
-      <article class="card"><h3>Observability &amp; Reliability</h3><p>Prometheus, Grafana, OpenTelemetry, Loki, Tempo, CloudWatch, alerts and SLOs.</p></article>
-      <article class="card"><h3>Software &amp; AI Systems</h3><p>Python, FastAPI, TypeScript, React, Next.js, PostgreSQL, Amazon Bedrock, RAG, LangGraph and MCP.</p></article>
-    </div></div></section>
+                <article class="case-study">
+                    <div class="case-top">
+                        <span class="case-type">Microsoft Azure / Secure Application Platform</span>
+                        <span class="case-id">CASE STUDY 05</span>
+                    </div>
+                    <h3>PropertyOps AI Agent</h3>
+                    <p class="case-summary">An Azure property operations platform demonstrating identity, private networking, infrastructure automation and audited human approval workflows. Its historical deployment is documented; the Azure subscription is currently disabled.</p>
+                    <div class="proof-strip">
+                        <span class="proof-chip">83 Python tests passed</span>
+                        <span class="proof-chip">14 subtests passed</span>
+                        <span class="proof-note">November 2026 local validation; Azure redeployment blocked by a disabled subscription.</span>
+                    </div>
+                    <div class="case-layout">
+                        <div>
+                            <h4 class="case-subtitle">The engineering problem</h4>
+                            <p>Operational applications need secure access, repeatable infrastructure and observable behaviour, not just business functionality.</p>
+                            <h4 class="case-subtitle">Architecture and implementation</h4>
+                            <p>FastAPI, PostgreSQL and Azure Container Apps integrate with Microsoft Entra ID, managed identity, Key Vault, Application Insights and Bicep infrastructure.</p>
+                            <h4 class="case-subtitle">Engineering decisions</h4>
+                            <p>Private endpoints and network boundaries protect supported data services. GitHub OIDC minimizes long-lived deployment credentials, while approval and audit tests validate sensitive workflow boundaries. A November 2026 safeguard prevents reopening finalized maintenance decisions.</p>
+                            <div class="stack">
+                                <span>Azure</span>
+                                <span>FastAPI</span>
+                                <span>Bicep</span>
+                                <span>PostgreSQL</span>
+                                <span>Entra ID</span>
+                                <span>Private Link</span>
+                                <span>OIDC</span>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://github.com/AZ1600/AI-property-operations" target="_blank" rel="noopener noreferrer">Source &amp; case study ↗</a>
+                                <a href="https://github.com/AZ1600/AI-property-operations/tree/main/infra" target="_blank" rel="noopener noreferrer">Bicep infrastructure ↗</a>
+                                <a href="https://github.com/AZ1600/AI-property-operations/tree/main/tests" target="_blank" rel="noopener noreferrer">Workflow tests ↗</a>
+                            </div>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>What the repository demonstrates</h4>
+                            <ul class="evidence-list">
+                                <li>Azure Container Apps and PostgreSQL architecture</li>
+                                <li>Microsoft Entra ID access control</li>
+                                <li>Managed identity and Key Vault configuration</li>
+                                <li>Private networking and DNS</li>
+                                <li>Bicep and GitHub OIDC CI/CD</li>
+                                <li>Maintenance approval finality, audit tests and documented deployment limitations</li>
+                            </ul>
+                            <a class="accent-link" href="https://github.com/AZ1600/AI-property-operations/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect Azure deployment evidence ↗</a>
+                        </aside>
+                    </div>
+                </article>
+                <p style="font-size:12px;color:var(--soft)">Test totals are recorded local validations from October–November 2026, not uptime guarantees or independent security certification. Azure screenshots document historical deployment evidence; the PropertyOps subscription is currently disabled.</p>
+            </div>
+        </section>
 
-    <section class="section" id="credentials"><div class="container"><div class="section-heading"><span class="kicker">07 / Continued development</span><h2>Learning backed by practical implementation.</h2><p>Formal learning, hands-on labs, troubleshooting and documented decisions all contribute to my engineering practice.</p></div><div class="skill-grid">
-      <article class="card"><span class="kicker">Certification</span><h3 style="margin-top:10px">AWS Certified Developer – Associate</h3><p>Cloud application design, AWS services, deployment and development practices.</p></article>
-      <article class="card"><span class="kicker">Practical Study</span><h3 style="margin-top:10px">Azure Infrastructure Engineering</h3><p>AZ-104-oriented labs covering networking, identity, compute, backup and Bicep.</p><p style="margin-top:14px"><a class="accent-link" href="https://github.com/AZ1600/az104-azure-infrastructure-lab" target="_blank" rel="noopener noreferrer">View Azure lab ↗</a></p></article>
-      <article class="card"><span class="kicker">Knowledge Base</span><h3 style="margin-top:10px">Engineering Handbook</h3><p>Technical concepts linked to real implementation and troubleshooting notes.</p><p style="margin-top:14px"><a class="accent-link" href="https://cloud-platform-engineering-handbook.vercel.app/" target="_blank" rel="noopener noreferrer">Read published handbook ↗</a></p></article>
-    </div></div></section>
+        <section class="section" id="recent-upgrades" aria-labelledby="recent-upgrades-heading">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">November 2026 / Verified improvements</span>
+                    <h2 id="recent-upgrades-heading">Recent security and reliability upgrades.</h2>
+                    <p>Focused pull requests to make self-service safer, protect inventory consistency and harden approval boundaries. The evidence refers to local tests and GitHub Actions, not unverified live production deployments.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <span class="kicker">Internal developer platforms</span>
+                        <h3 style="margin-top:12px">Backstage golden path security</h3>
+                        <p>New GitHub repositories generated through the golden path are private by default. Ten security regression tests passed; the local production-image Trivy scan reported no HIGH or CRITICAL findings under its configured policy, and the updated PR passed CI. Dependency pruning is documented as a targeted workaround.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-backstage-portal" target="_blank" rel="noopener noreferrer">Inspect Backstage repository ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">Serverless / Inventory consistency</span>
+                        <h3 style="margin-top:12px">PharmaFlow atomic batch uniqueness</h3>
+                        <p>DynamoDB transactions create tenant-scoped medicine records and uniqueness guards together. Duplicate batches receive HTTP 409; 37 local Python tests and GitHub validation passed. Existing records require a separate backfill, and no live AWS deployment was verified for this change.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/CloudNativePharmacyPlatform" target="_blank" rel="noopener noreferrer">Inspect PharmaFlow repository ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">AWS / Approval safety</span>
+                        <h3 style="margin-top:12px">Content automation safeguards</h3>
+                        <p>Publishing requests now require explicit JSON boolean approval values instead of relying on Python truthiness. Eighteen local Python tests and GitHub Actions passed, with external publishing mocked during tests. No live posts or AWS deployments are claimed.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/AI-Powered-Content-Automation-Platform" target="_blank" rel="noopener noreferrer">Inspect automation repository ↗</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <section class="section" id="contact"><div class="container"><div class="contact-box"><span class="kicker">08 / Connect</span><h2>Interested in building reliable cloud platforms?</h2><p>I'm open to Cloud Engineering, Platform Engineering and DevOps opportunities involving infrastructure automation, developer platforms and reliability engineering. I welcome discussions about engineering roles, technical work and collaboration.</p><div class="hero-actions"><a class="btn btn-primary" href="https://www.linkedin.com/in/olawale-azeez-40a891382/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn btn-secondary" href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a class="btn btn-plain" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a></div></div></div></section>
-  </main>
-  <footer class="footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Olawale Azeez. Built with HTML &amp; CSS. Hosted on GitHub Pages.</p><div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/olawale-azeez-40a891382/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <section class="section" id="calciosapien" aria-labelledby="calciosapien-title">
+            <div class="container">
+                <div class="private-spotlight">
+                    <span class="private-spotlight__eyebrow">Private product · Independent engineering project</span>
+                    <div class="private-spotlight__grid">
+                        <div>
+                            <span class="kicker">Football intelligence &amp; decision governance</span>
+                            <h2 id="calciosapien-title">CalcioSapien</h2>
+                            <p class="private-spotlight__lead">A private football intelligence platform connecting sourced player evidence to accountable recruitment decisions.</p>
+                            <p>The product models data provenance, scouting observations, recruitment shortlists, scenario analysis, board authorization, negotiation workflows and audit history.</p>
+                            <p>Built with FastAPI and React, persistent workflows, role-scoped permissions, backend tests, CI checks and documented private-hosting, backup and recovery considerations. Deterministic scoring is distinguished from opt-in model assistance.</p>
+                            <div class="stack">
+                                <span>Python / FastAPI</span>
+                                <span>React</span>
+                                <span>Data provenance</span>
+                                <span>Decision workflows</span>
+                                <span>RBAC</span>
+                                <span>Docker / CI</span>
+                            </div>
+                            <div class="hero-actions">
+                                <a class="btn btn-secondary" href="#contact">Enquire about a private walkthrough ↗</a>
+                            </div>
+                            <p class="private-spotlight__note">Public-safe overview only. Source code, licensed datasets, accounts and deployment details are intentionally private. This is a developing product, not a claim of commercial adoption.</p>
+                        </div>
+                        <aside class="evidence-panel">
+                            <h4>Engineering highlights</h4>
+                            <ul class="evidence-list">
+                                <li>Traceable evidence and guarded data import</li>
+                                <li>Scout-to-shortlist-to-decision workflows</li>
+                                <li>Explicit approvals and role authorization</li>
+                                <li>Audit records and reporting</li>
+                                <li>Automated backend tests and CI checks</li>
+                                <li>Private deployment and recovery design</li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">03 / Delivery method</span>
+                    <h2>From design to reliable operations.</h2>
+                    <p>My engineering approach connects implementation with repeatable delivery, validation and operational evidence.</p>
+                </div>
+                <div class="architecture">
+                    <div class="architecture-item">
+                        <span class="number">STEP 01</span>
+                        <strong>Design</strong>
+                        <p>Requirements, trade-offs and security boundaries</p>
+                    </div>
+                    <div class="architecture-item">
+                        <span class="number">STEP 02</span>
+                        <strong>Build</strong>
+                        <p>Terraform, Bicep, cloud services and applications</p>
+                    </div>
+                    <div class="architecture-item">
+                        <span class="number">STEP 03</span>
+                        <strong>Validate</strong>
+                        <p>Tests, lint, typecheck and security audits</p>
+                    </div>
+                    <div class="architecture-item">
+                        <span class="number">STEP 04</span>
+                        <strong>Deliver</strong>
+                        <p>CI/CD, containers, OIDC and GitOps</p>
+                    </div>
+                    <div class="architecture-item">
+                        <span class="number">STEP 05</span>
+                        <strong>Operate</strong>
+                        <p>Metrics, logs, alerts and evidence</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">04 / More engineering projects</span>
+                    <h2>Explore the engineering portfolio.</h2>
+                    <p>Supporting projects organized by discipline, complementing the flagship case studies above.</p>
+                </div>
+                <div class="category-heading">
+                    <h3>Cloud Infrastructure &amp; Security</h3>
+                    <span>Provisioning · workload security · cloud platforms</span>
+                </div>
+                <div class="project-grid">
+                    <article class="card project-card">
+                        <span class="category">AWS / Kubernetes</span>
+                        <h4>Pharmacy API on Amazon EKS</h4>
+                        <p>FastAPI, Amazon Cognito, EKS Pod Identity, DynamoDB, resilience controls, CI/CD and container supply-chain validation.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/pharmacy-api-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Infrastructure as Code</span>
+                        <h4>Terraform AWS EKS Platform</h4>
+                        <p>Modular Terraform, private networking, automated guardrail tests, IaC scanning and AWS OIDC plan workflows.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-terraform-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Microsoft Azure / Bicep</span>
+                        <h4>AZ-104 Azure Infrastructure Lab</h4>
+                        <p>Private VMs, Bastion, managed identities, RBAC, Private Link, backup and deployment verification using Azure and Bicep.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/az104-azure-infrastructure-lab" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                </div>
+                <div class="category-heading">
+                    <h3>Developer Platforms &amp; Delivery</h3>
+                    <span>Self-service · CI/CD · GitOps</span>
+                </div>
+                <div class="project-grid">
+                    <article class="card project-card">
+                        <span class="category">Internal Developer Platform</span>
+                        <h4>Backstage Developer Portal</h4>
+                        <p>Backstage software catalog and private-by-default GitHub golden paths, validated by 10 security regression tests, container scanning and passing CI.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-backstage-portal" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Supply-Chain Security</span>
+                        <h4>Platform Engineering CI/CD</h4>
+                        <p>Container scans, AWS ECR publishing, GitHub OIDC, SBOMs and artifact attestations.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-cicd-pipeline" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">GitOps / Kubernetes</span>
+                        <h4>Argo CD GitOps Platform</h4>
+                        <p>Declarative Kubernetes delivery, pull-request validation, Argo CD reconciliation and release configuration.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-gitops-argocd" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Developer Self-Service</span>
+                        <h4>Backstage Generated Inventory API</h4>
+                        <p>A FastAPI service created from a Backstage golden path with container, Kubernetes, CI and test support.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/backstage-generated-inventory-api" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                </div>
+                <div class="category-heading">
+                    <h3>Observability &amp; AI Engineering</h3>
+                    <span>Telemetry · retrieval · automation</span>
+                </div>
+                <div class="project-grid">
+                    <article class="card project-card">
+                        <span class="category">Site Reliability Engineering</span>
+                        <h4>Platform Observability Stack</h4>
+                        <p>Prometheus, Grafana, OpenTelemetry, Loki, Tempo, SLO monitoring, error-budget alerts and rule validation.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-observability" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">AI Workflow Automation</span>
+                        <h4>AI Resume Analyzer</h4>
+                        <p>Resume evidence extraction, explainable skill scoring, n8n workflows and AWS Bedrock analysis.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/ai-resume-analyzer-n8n" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Serverless Automation</span>
+                        <h4>AI Content Automation Platform</h4>
+                        <p>AWS Lambda and SAM workflows for planning, OAuth, scheduling and publishing. Strict JSON boolean approval checks prevent malformed values authorizing posts; 18 tests passed.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/AI-Powered-Content-Automation-Platform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                </div>
+                <div class="category-heading">
+                    <h3>Applications &amp; Engineering Knowledge</h3>
+                    <span>Serverless systems · documentation</span>
+                </div>
+                <div class="project-grid">
+                    <article class="card project-card">
+                        <span class="category">Serverless Application</span>
+                        <h4>Cloud-Native Pharmacy Platform</h4>
+                        <p>React, AWS Lambda and DynamoDB inventory with atomic, tenant-scoped medicine batch uniqueness; 37 Python tests and passing CI. No live AWS deployment claimed.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/CloudNativePharmacyPlatform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+                    </article>
+                    <article class="card project-card">
+                        <span class="category">Engineering Knowledge Base</span>
+                        <h4>Cloud &amp; Platform Engineering Handbook</h4>
+                        <p>A published technical handbook linking architecture, cloud labs, troubleshooting and platform engineering patterns.</p>
+                        <a class="accent-link" href="https://cloud-platform-engineering-handbook.vercel.app/" target="_blank" rel="noopener noreferrer">Read the handbook ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="evidence">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">05 / Verifiable engineering</span>
+                    <h2>Explore the evidence behind the work.</h2>
+                    <p>Inspect the tests, architecture decisions and delivery records rather than relying on project descriptions alone.</p>
+                </div>
+                <div class="evidence-grid">
+                    <article class="evidence-card">
+                        <h3>01 — Bedrock and AWS validation</h3>
+                        <p>Inspect grounded retrieval evaluation, live AWS tests, security boundaries and documented resource cleanup.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/rag-ops-assistant/blob/main/docs/live-verification.md" target="_blank" rel="noopener noreferrer">Review RAG Ops verification ↗</a>
+                    </article>
+                    <article class="evidence-card">
+                        <h3>02 — PostgreSQL tenant isolation</h3>
+                        <p>Read database integration tests for authentication, workspace isolation, approvals and idempotency.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/opspilot-saas/tree/main/tests/integration" target="_blank" rel="noopener noreferrer">Inspect OpsPilot database tests ↗</a>
+                    </article>
+                    <article class="evidence-card">
+                        <h3>03 — Kubernetes access control</h3>
+                        <p>Review protected APIs, permission tests, and structured operational findings.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-pilot/tree/main/backend/tests" target="_blank" rel="noopener noreferrer">Inspect PlatformPilot tests ↗</a>
+                    </article>
+                    <article class="evidence-card">
+                        <h3>04 — Controlled automation</h3>
+                        <p>Explore risk validation, Decision Traces, human approval gates and simulated remediation records.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/cloudops-command-center/tree/main/tests" target="_blank" rel="noopener noreferrer">Inspect CloudOps tests ↗</a>
+                    </article>
+                    <article class="evidence-card">
+                        <h3>05 — Historical Azure deployment</h3>
+                        <p>Review Bicep infrastructure, managed identity, private networking and approval tests. The Azure subscription is currently disabled.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/AI-property-operations/tree/main/docs/screenshots" target="_blank" rel="noopener noreferrer">Inspect Azure evidence ↗</a>
+                    </article>
+                    <article class="evidence-card">
+                        <h3>06 — Infrastructure testing</h3>
+                        <p>Inspect Terraform modules, guardrails, security checks and repeatable delivery workflows.</p>
+                        <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-terraform-eks/tree/main/modules" target="_blank" rel="noopener noreferrer">Inspect Terraform modules ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">06 / Engineering toolkit</span>
+                    <h2>Core engineering stack.</h2>
+                    <p>Tools used across hands-on infrastructure, platform, application and AI operations projects.</p>
+                </div>
+                <div class="skill-grid">
+                    <article class="card">
+                        <h3>Cloud Platforms</h3>
+                        <p>AWS: ECS, EKS, IAM, Lambda, Bedrock, CloudWatch. Azure: Container Apps, VMs, Entra ID, Key Vault, networking.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Infrastructure as Code</h3>
+                        <p>Terraform, Bicep, AWS SAM, GitHub OIDC and policy/security checks.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Containers &amp; Kubernetes</h3>
+                        <p>Docker, Kubernetes, EKS, Helm, Argo CD, Prometheus and workload diagnostics.</p>
+                    </article>
+                    <article class="card">
+                        <h3>CI/CD &amp; DevSecOps</h3>
+                        <p>GitHub Actions, pipeline testing, vulnerability scanning, SBOMs and supply-chain controls.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Observability &amp; Reliability</h3>
+                        <p>Prometheus, Grafana, OpenTelemetry, Loki, Tempo, CloudWatch, alerts and SLOs.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Software &amp; AI Systems</h3>
+                        <p>Python, FastAPI, TypeScript, React, Next.js, PostgreSQL, Amazon Bedrock, RAG, LangGraph and MCP.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="credentials">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="kicker">07 / Continued development</span>
+                    <h2>Learning backed by practical implementation.</h2>
+                    <p>Formal learning, hands-on labs, troubleshooting and documented decisions all contribute to my engineering practice.</p>
+                </div>
+                <div class="skill-grid">
+                    <article class="card">
+                        <span class="kicker">Certification</span>
+                        <h3 style="margin-top:10px">AWS Certified Developer – Associate</h3>
+                        <p>Cloud application design, AWS services, deployment and development practices.</p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">Practical Study</span>
+                        <h3 style="margin-top:10px">Azure Infrastructure Engineering</h3>
+                        <p>AZ-104-oriented labs covering networking, identity, compute, backup and Bicep.</p>
+                        <p style="margin-top:14px">
+                            <a class="accent-link" href="https://github.com/AZ1600/az104-azure-infrastructure-lab" target="_blank" rel="noopener noreferrer">View Azure lab ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">Knowledge Base</span>
+                        <h3 style="margin-top:10px">Engineering Handbook</h3>
+                        <p>Technical concepts linked to real implementation and troubleshooting notes.</p>
+                        <p style="margin-top:14px">
+                            <a class="accent-link" href="https://cloud-platform-engineering-handbook.vercel.app/" target="_blank" rel="noopener noreferrer">Read published handbook ↗</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <span class="kicker">08 / Connect</span>
+                    <h2>Interested in building reliable cloud platforms?</h2>
+                    <p>I'm open to Cloud Engineering, Platform Engineering and DevOps opportunities involving infrastructure automation, developer platforms and reliability engineering. I welcome discussions about engineering roles, technical work and collaboration.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="https://www.linkedin.com/in/olawale-azeez-40a891382/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+                        <a class="btn btn-secondary" href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+                        <a class="btn btn-plain" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>
+                © 
+                <span id="year">2026</span>
+                 Olawale Azeez. Built with HTML &amp; CSS. Hosted on GitHub Pages.
+            </p>
+            <div class="footer-links">
+                <a href="#home">Back to top ↑</a>
+                <a href="https://github.com/AZ1600" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/olawale-azeez-40a891382/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

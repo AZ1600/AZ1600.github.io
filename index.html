@@ -1174,9 +1174,9 @@
         <section class="section" id="recent-upgrades" aria-labelledby="recent-upgrades-heading">
             <div class="container">
                 <div class="section-heading">
-                    <span class="kicker">November 2026 / Verified improvements</span>
+                    <span class="kicker">November 2026 / Engineering validation</span>
                     <h2 id="recent-upgrades-heading">Recent security and reliability upgrades.</h2>
-                    <p>Focused pull requests to make self-service safer, protect inventory consistency and harden approval boundaries. The evidence refers to local tests and GitHub Actions, not unverified live production deployments.</p>
+                    <p>Six focused engineering improvements covering access control, Kubernetes GitOps, SLO correctness, developer self-service, inventory consistency and publishing approval safety. Test and CI results are documented evidence, not claims of live production deployment.</p>
                 </div>
                 <div class="card-grid">
                     <article class="card">
@@ -1201,6 +1201,30 @@
                         <p>Publishing requests now require explicit JSON boolean approval values instead of relying on Python truthiness. Eighteen local Python tests and GitHub Actions passed, with external publishing mocked during tests. No live posts or AWS deployments are claimed.</p>
                         <p style="margin-top:16px">
                             <a class="accent-link" href="https://github.com/AZ1600/AI-Powered-Content-Automation-Platform" target="_blank" rel="noopener noreferrer">Inspect automation repository ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">AWS / Kubernetes access control</span>
+                        <h3 style="margin-top:12px">Pharmacy API authentication and dependency hardening</h3>
+                        <p>Hardened the EKS-hosted API to require the correct Cognito access-token type and updated a vulnerable compression dependency. The change went through the repository's automated validation; this is not a claim of a new live EKS deployment.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/pharmacy-api-eks" target="_blank" rel="noopener noreferrer">Inspect Pharmacy API repository ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">GitOps / Manifest safety</span>
+                        <h3 style="margin-top:12px">Argo CD deployment guardrails</h3>
+                        <p>Added automated checks for Kubernetes and GitOps manifests, with 12 local regression tests passing. The repository demonstrates pull-request validation and Argo CD delivery controls; no new cluster deployment is asserted.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-gitops-argocd" target="_blank" rel="noopener noreferrer">Inspect GitOps repository ↗</a>
+                        </p>
+                    </article>
+                    <article class="card">
+                        <span class="kicker">SRE / SLO accuracy</span>
+                        <h3 style="margin-top:12px">Observability error-budget correction</h3>
+                        <p>Corrected Prometheus SLO error-budget calculation and validated monitoring rules in CI. This strengthens the reliability signals that drive alerting without implying measured production uptime.</p>
+                        <p style="margin-top:16px">
+                            <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-observability" target="_blank" rel="noopener noreferrer">Inspect Observability repository ↗</a>
                         </p>
                     </article>
                 </div>
@@ -1299,7 +1323,7 @@
                     <article class="card project-card">
                         <span class="category">AWS / Kubernetes</span>
                         <h4>Pharmacy API on Amazon EKS</h4>
-                        <p>FastAPI, Amazon Cognito, EKS Pod Identity, DynamoDB, resilience controls, CI/CD and container supply-chain validation.</p>
+                        <p>FastAPI on EKS with Cognito access-token validation, Pod Identity, DynamoDB, immutable container delivery, dependency hardening and automated CI checks.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/pharmacy-api-eks" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                     <article class="card project-card">
@@ -1311,7 +1335,7 @@
                     <article class="card project-card">
                         <span class="category">Microsoft Azure / Bicep</span>
                         <h4>AZ-104 Azure Infrastructure Lab</h4>
-                        <p>Private VMs, Bastion, managed identities, RBAC, Private Link, backup and deployment verification using Azure and Bicep.</p>
+                        <p>Azure and Bicep infrastructure labs covering private networking, NSGs, Linux VMs, RBAC, deployment validation and automated IaC security checks.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/az104-azure-infrastructure-lab" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                 </div>
@@ -1335,13 +1359,13 @@
                     <article class="card project-card">
                         <span class="category">GitOps / Kubernetes</span>
                         <h4>Argo CD GitOps Platform</h4>
-                        <p>Declarative Kubernetes delivery, pull-request validation, Argo CD reconciliation and release configuration.</p>
+                        <p>Declarative Kubernetes delivery with Argo CD, pull-request checks and 12 automated manifest guardrail tests to catch unsafe configuration changes.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-gitops-argocd" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                     <article class="card project-card">
                         <span class="category">Developer Self-Service</span>
                         <h4>Backstage Generated Inventory API</h4>
-                        <p>A FastAPI service created from a Backstage golden path with container, Kubernetes, CI and test support.</p>
+                        <p>A FastAPI service scaffolded through a Backstage golden path, demonstrating template-based self-service, containerization, Kubernetes manifests and CI tests.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/backstage-generated-inventory-api" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                 </div>
@@ -1353,7 +1377,7 @@
                     <article class="card project-card">
                         <span class="category">Site Reliability Engineering</span>
                         <h4>Platform Observability Stack</h4>
-                        <p>Prometheus, Grafana, OpenTelemetry, Loki, Tempo, SLO monitoring, error-budget alerts and rule validation.</p>
+                        <p>Prometheus, Grafana, OpenTelemetry, Loki and Tempo with SLO monitoring, corrected error-budget calculations and validated alerting rules.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/platform-engineering-observability" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                     <article class="card project-card">
@@ -1377,7 +1401,7 @@
                     <article class="card project-card">
                         <span class="category">Serverless Application</span>
                         <h4>Cloud-Native Pharmacy Platform</h4>
-                        <p>React, AWS Lambda and DynamoDB inventory with atomic, tenant-scoped medicine batch uniqueness; 37 Python tests and passing CI. No live AWS deployment claimed.</p>
+                        <p>React and AWS serverless pharmacy inventory with atomic DynamoDB batch uniqueness per tenant, HTTP 409 duplicate handling, 37 Python tests and passing CI; backfill and AWS deployment remain separate.</p>
                         <a class="accent-link" href="https://github.com/AZ1600/CloudNativePharmacyPlatform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
                     </article>
                     <article class="card project-card">
